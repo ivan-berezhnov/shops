@@ -1,0 +1,28 @@
+#!/bin/bash
+
+## DOOR3 Docksal package, v1.0
+##
+## Run Gulp in the theme folder
+##
+## Usage: fin gulp <gulpcommand>
+
+
+# Console colors
+red='\033[0;31m'
+green='\033[0;32m'
+green_bg='\033[42m'
+yellow='\033[1;33m'
+NC='\033[0m'
+
+# Helper functions for console output
+echo-red () { echo -e "${red}$1${NC}"; }
+echo-green () { echo -e "${green}$1${NC}"; }
+echo-green-bg () { echo -e "${green_bg}$1${NC}"; }
+echo-yellow () { echo -e "${yellow}$1${NC}"; }
+
+echo-green "Array size: ${THEMES[*]}"
+
+for THEME in ${THEMES[*]}
+do
+    echo-yellow "   %s\n" $THEME
+done
