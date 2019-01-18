@@ -764,6 +764,11 @@ $settings['entity_update_batch_size'] = 50;
  *
  * Keep this code block at the end of this file to take full effect.
  */
+
+$config['config_split.config_split.sb_site']['status'] = TRUE;
+$config['config_split.config_split.tl_site']['status'] = FALSE;
+$config['config_split.config_split.win_site']['status'] = FALSE;
+
 $config_directories['sync'] = '../config/sync';
 
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
