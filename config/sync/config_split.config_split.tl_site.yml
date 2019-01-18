@@ -1,0 +1,17 @@
+uuid: c923ce79-bc8a-4b62-92f3-805175a0d49f
+langcode: en
+status: true
+dependencies: {  }
+id: tl_site
+label: 'Tooll site'
+description: ''
+folder: ../config/splits/tl
+module: {  }
+theme: {  }
+blacklist:
+  - system.site
+  - system.theme.global
+graylist: {  }
+graylist_dependents: false
+graylist_skip_equal: true
+weight: 0

@@ -4,5 +4,5 @@
   ___/ / __  / /_/ / ____/___/ /
  /____/_/ /_/\____/_/    /____/
 
-   SHOPS Docksal package v1.1
+   SHOPS Docksal package v1.0
 

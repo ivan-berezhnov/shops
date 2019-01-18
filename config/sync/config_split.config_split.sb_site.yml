@@ -1,0 +1,17 @@
+uuid: b52c7948-0769-4a95-9f69-b8420f28924c
+langcode: en
+status: true
+dependencies: {  }
+id: sb_site
+label: 'SportBaza site'
+description: ''
+folder: ../config/splits/sb
+module: {  }
+theme: {  }
+blacklist:
+  - system.site
+  - system.theme.global
+graylist: {  }
+graylist_dependents: false
+graylist_skip_equal: true
+weight: 0

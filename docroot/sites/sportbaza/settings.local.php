@@ -83,7 +83,7 @@ $settings['rebuild_access'] = FALSE;
 $settings['skip_permissions_hardening'] = TRUE;
 
 $databases['default']['default'] = array (
-  'database' => 'default',
+  'database' => 'sportbaza',
   'username' => 'root',
   'password' => 'root',
   'prefix' => 'sho_',
@@ -93,8 +93,6 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 
-$settings['install_profile'] = 'standard';
-$config_directories['sync'] = '../config/sync';
 $config['system.logging']['error_level'] = 'verbose';
 
 /*
@@ -108,7 +106,7 @@ if (file_exists("$app_root/$site_path/.env")) {
 }
 
 if ($env == 'dev') {
-  $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/development.services.yml';
+  $settings['container_yamls'][] = DRUPAL_ROOT . '/' . $site_path . '/development.services.yml';
   $settings['cache']['bins']['render'] = 'cache.backend.null';
   $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
 

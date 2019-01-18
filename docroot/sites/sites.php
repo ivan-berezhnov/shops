@@ -56,10 +56,10 @@
  * @see https://www.drupal.org/documentation/install/multi-site
  */
 
-if (file_exists($app_root . '/' . $site_path . '/sites.local.php')) {
-  include $app_root . '/' . $site_path . '/sites.local.php';
+if (file_exists($app_root . '/sites/sites.local.php')) {
+  include $app_root . '/sites/sites.local.php';
 }
 
-if (file_exists($app_root . '/' . $site_path . '/sites.local.php')) {
-  include $app_root . '/' . $site_path . '/sites.local.php';
+if (file_exists($app_root . '/sites/sites.local.php')) {
+  include $app_root . '/sites/sites.local.php';
 }

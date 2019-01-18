@@ -1,0 +1,17 @@
+uuid: e012ad58-63ad-4cf7-be46-7b084c894d03
+langcode: en
+status: true
+dependencies: {  }
+id: win_site
+label: 'WinSport site'
+description: ''
+folder: ../config/splits/win
+module: {  }
+theme: {  }
+blacklist:
+  - system.site
+  - system.theme.global
+graylist: {  }
+graylist_dependents: false
+graylist_skip_equal: true
+weight: 0
