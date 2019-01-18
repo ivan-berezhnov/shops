@@ -1,28 +1,32 @@
 #!/bin/bash
 
-## DOOR3 Docksal package, v1.0
+## SHOPS Docksal package, v1.0
 ##
-## Run Gulp in the theme folder
+## Run theme compilation using gulp
 ##
 ## Usage: fin gulp <gulpcommand>
 
+THEME_PATH_INSIDE_CONTAINER="/var/www/${DOCROOT}/themes/${THEME_NAME}"
+DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
+MAIN_THEME_PATH="${DOCROOT_PATH}/themes/${THEME_NAME}"
 
-# Console colors
-red='\033[0;31m'
-green='\033[0;32m'
-green_bg='\033[42m'
-yellow='\033[1;33m'
-NC='\033[0m'
+install_gulp() {
+  fin exec "npm install -g gulp"
+  fin exec "cd ${THEME_PATH_INSIDE_CONTAINER}; npm install"
+  set +e
+}
 
-# Helper functions for console output
-echo-red () { echo -e "${red}$1${NC}"; }
-echo-green () { echo -e "${green}$1${NC}"; }
-echo-green-bg () { echo -e "${green_bg}$1${NC}"; }
-echo-yellow () { echo -e "${yellow}$1${NC}"; }
+echo "Running gulp tasks in theme ${THEME_PATH_INSIDE_CONTAINER}"
 
-echo-green "Array size: ${THEMES[*]}"
+echo "${MAIN_THEME_PATH}/package-lock.json"
 
-for THEME in ${THEMES[*]}
-do
-    echo-yellow "   %s\n" $THEME
-done
+if [ -f "${MAIN_THEME_PATH}/package-lock.json" ]; then
+    echo "package-lock.json is available, just running gulp compilation."
+else
+    echo "package-lock.json is not available, deleting node_modules and npm install\n"
+    rm -rf $THEME_PATH_INSIDE_CONTAINER/node_modules
+    install_gulp
+fi
+
+
+fin exec "cd ${THEME_PATH_INSIDE_CONTAINER}; gulp $1"

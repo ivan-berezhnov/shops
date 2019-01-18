@@ -1,0 +1,4 @@
+# Cypress install command
+# Use it for auto install of cypress
+cd cypress
+fin exec npm install cypress
