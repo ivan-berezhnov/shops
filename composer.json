@@ -49,6 +49,7 @@
         "drupal/webform": "^5.0@RC",
         "drush/drush": "~8.0|^9.0.0-beta8",
         "enyo/dropzone": "4.3",
+        "drupal/commerce": "^2.6",
         "hussainweb/drupal-composer-helper": "^1.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "zaporylie/composer-drupal-optimizations": "^1.0"
