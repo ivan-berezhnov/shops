@@ -2,4 +2,4 @@ version: "2.1"
 services:
   cli:
     ports:
-      - '2225:22'
+      - '2228:22'
