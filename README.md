@@ -1,4 +1,4 @@
-# SHOP Drupal 8
+# SHOPS Drupal 8
 
 Experimental Docksal build
 
