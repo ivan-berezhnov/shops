@@ -1,9 +1,3 @@
-# Ignore paths that contain user-generated content.
-docroot/sites/*/files
-docroot/sites/*/private
-private/*
-files/*
-
 # Pantheon commits a settings.php for environment-specific settings.
 # Place local settings in settings.local.php
 sites/*/settings.*.php
@@ -63,18 +57,25 @@ Thumbs.db
 docker-runtime/
 .DS_Store
 confd
-
+/vendor/
 /ngrok
 /console
 .docker-sync
+
+# Cypress files
+cypress/node_modules/*
+
+# Drupal core and contrib files
 docroot/libraries
 docroot/vendor
 docroot/modules/contrib
 docroot/themes/contrib
 docroot/core
-
 docroot/charge.php
 
-cypress/node_modules/*
 
-/vendor/
+# Ignore paths that contain user-generated content.
+docroot/sites/*/files
+docroot/sites/*/private
+private/*
+files/*
