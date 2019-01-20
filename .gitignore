@@ -72,18 +72,7 @@ docroot/modules/contrib
 docroot/themes/contrib
 docroot/core
 docroot/charge.php
-docroot/.csslintrc
-docroot/.editorconfig
-docroot/.eslintignore
-docroot/.eslintrc.json
-docroot/.gitattributes
-docroot/.ht.router.php
-docroot/.htaccess
-docroot/autoload.php
-docroot/index.php
-docroot/robots.txt
-docroot/update.php
-docroot/web.config
+docroot/sites/default
 
 # Ignore paths that contain user-generated content.
 docroot/sites/*/files
