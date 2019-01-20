@@ -132,6 +132,6 @@ echo-green "Done.\n"
 echo-green " <<<<<<< Rebuild is complete >>>>>>> "
 
 echo-green " You can open: http://sp.shop.docksal "
-echo-green " You can open: http://win.shop.docksal "
-echo-green " You can open: http://tl.shop.docksal "
+echo-green "               http://win.shop.docksal "
+echo-green "               http://tl.shop.docksal "
 echo
