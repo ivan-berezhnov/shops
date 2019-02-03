@@ -65,7 +65,8 @@ set +e
 
 fin ps
 
-whiami
+echo-yellow "Current user..."
+echo "$USER"
 
 echo-yellow "Create dbs..."
 fin db create sportbaza
