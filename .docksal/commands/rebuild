@@ -83,8 +83,12 @@ set -e
 #rm -f $PROJECT_ROOT/db/database.sql
 #echo-green "Done.\n"
 
-echo-yellow "Containers..."
-fin ps
+echo-yellow "Remove dbs..."
+fin db drop default
+fin db drop sportbaza
+fin db drop tooll
+fin db drop winsport
+echo-green "Done.\n"
 
 echo-yellow "Create dbs..."
 fin db create sportbaza
