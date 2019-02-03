@@ -59,11 +59,57 @@ sleep 10
 # Site initialization
 echo -e "${green_bg} Step 2 ${NC}${green} Initializing site...${NC}"
 # This runs inside cli using http://docs.docksal.io/en/v1.4.0/fin/custom-commands/#executing-commands-inside-cli
-fin rebuild
 
-echo -en "${green_bg} Composer compiled! ${NC} "
+# We nee do catch error if any
+set +e
 
-echo -en "${green_bg} DONE! ${NC} "
-echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
+fin ps
+
+echo-yellow "Create dbs..."
+fin db create sportbaza
+fin db create tooll
+fin db create winsport
+echo-green "Done.\n"
+
+echo-yellow "Import dbs..."
+fin db import $PROJECT_ROOT/db/default_sportbaza.sql --db=sportbaza --db-user=user --db-password=user
+fin db import $PROJECT_ROOT/db/default_tooll.sql --db=tooll --db-user=user --db-password=user
+fin db import $PROJECT_ROOT/db/default_winsport.sql --db=winsport --db-user=user --db-password=user
+echo-green "\n"
+
+# Running composer
+echo-yellow "Running composer install"
+cd $PROJECT_ROOT
+fin exec composer install
+echo-green "Done.\n"
+
+# Running Drush commands
+echo-yellow "Running drush cim, drush updb, drush cr"
+echo-yellow " > sportbaza"
+cd $DOCROOT_PATH
+fin drush updb -y --uri=sb.shop.docksal
+fin drush cim -y --uri=sb.shop.docksal
+fin drush cr --uri=sb.shop.docksal
+echo-yellow " > tooll"
+fin drush updb -y --uri=tl.shop.docksal
+fin drush cim -y --uri=tl.shop.docksal
+fin drush cr --uri=tl.shop.docksal
+echo-yellow " > winsport"
+fin drush updb -y --uri=win.shop.docksal
+fin drush cim -y --uri=win.shop.docksal
+fin drush cr --uri=win.shop.docksal
+echo-green "Done.\n"
+
+## Building theme
+#echo-yellow "Running gulp tasks in theme ${MAIN_THEME}"
+#fin gulp build
+
+echo-green " <<<<<<< Rebuild is complete >>>>>>> "
+
+echo-green " You can open: http://sp.shop.docksal "
+echo-green "               http://win.shop.docksal "
+echo-green "               http://tl.shop.docksal "
+echo
+
 
 #-------------------------- END: Execution --------------------------------
