@@ -65,6 +65,8 @@ set +e
 
 fin ps
 
+whiami
+
 echo-yellow "Create dbs..."
 fin db create sportbaza
 fin db create tooll
@@ -106,9 +108,9 @@ echo-green "Done.\n"
 
 echo-green " <<<<<<< Rebuild is complete >>>>>>> "
 
-echo-green " You can open: http://sp.shop.docksal "
-echo-green "               http://win.shop.docksal "
-echo-green "               http://tl.shop.docksal "
+echo-green " You can open: http://sp.${VIRTUAL_HOST}${NC} "
+echo-green "               http://win.${VIRTUAL_HOST}${NC} "
+echo-green "               http://tl.${VIRTUAL_HOST}${NC} "
 echo
 
 
