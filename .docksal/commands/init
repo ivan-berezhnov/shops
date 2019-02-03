@@ -84,6 +84,7 @@ set -e
 #echo-green "Done.\n"
 
 echo-yellow "Containers..."
+fin p restart
 fin ps
 
 echo-yellow "Create dbs..."
