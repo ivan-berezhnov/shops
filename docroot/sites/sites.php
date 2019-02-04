@@ -59,7 +59,3 @@
 if (file_exists($app_root . '/sites/sites.local.php')) {
   include $app_root . '/sites/sites.local.php';
 }
-
-if (file_exists($app_root . '/sites/sites.local.php')) {
-  include $app_root . '/sites/sites.local.php';
-}
