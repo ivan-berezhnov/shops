@@ -107,10 +107,11 @@ echo-green "\n"
 
 echo-yellow "Configuration file for multi-site..."
 echo "<?php" > $DOCROOT_PATH/sites/sites.local.php
-echo "\$sites['${URL_SB}'] = 'sportbaza';" >> $DOCROOT_PATH/sites/sites.local.php
-echo "\$sites['${URL_TL}'] = 'tooll';" >> $DOCROOT_PATH/sites/sites.local.php
-echo "\$sites['${URL_WIN}'] = 'winsport';" >> $DOCROOT_PATH/sites/sites.local.php
-cat $DOCROOT_PATH/sites/sites.local.php
+echo "\$sites['${URL_SB}'] = 'sportbaza';" >> $DOCROOT_PATH/sites/sites.php
+echo "\$sites['${URL_TL}'] = 'tooll';" >> $DOCROOT_PATH/sites/sites.php
+echo "\$sites['${URL_WIN}'] = 'winsport';" >> $DOCROOT_PATH/sites/sites.php
+echo " " >> $DOCROOT_PATH/sites/sites.php
+cat $DOCROOT_PATH/sites/sites.php
 echo-green "Done.\n"
 
 # Running composer
