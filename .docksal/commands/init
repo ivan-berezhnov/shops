@@ -53,8 +53,8 @@ if [[ $DOCKER_RUNNING == "true" ]]; then
 else
 	fin up
 fi
-echo "Waiting 10s for MySQL to initialize...";
-sleep 10
+echo "Waiting 15s for container to start...";
+sleep 15
 
 # Site initialization
 echo -e "${green_bg} Step 2 ${NC}${green} Initializing site...${NC}"
