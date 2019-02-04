@@ -80,6 +80,8 @@ echo "\$sites['${URL_WIN}'] = 'winsport';" >> $DOCROOT_PATH/sites/sites.local.ph
 cat $DOCROOT_PATH/sites/sites.local.php
 echo-green "Done.\n"
 
+fin drush sa
+
 #echo-yellow "Remove dbs..."
 #fin db drop default
 #fin db drop sportbaza
@@ -96,6 +98,10 @@ fin drush sql-create -y --uri=$URL_SB
 fin drush sql-create -y --uri=$URL_TL
 fin drush sql-create -y --uri=$URL_WIN
 fin db ls
+echo-green "Done.\n"
+
+echo-yellow "Site status..."
+fin drush @sites status
 echo-green "Done.\n"
 
 echo-yellow "Import dbs..."
