@@ -112,12 +112,16 @@ echo-yellow "Import dbs..."
 
 fin drush sql-drop -y --uri=$URL_SB
 fin drush sql-cli < $PROJECT_ROOT/db/default_sportbaza.sql --uri=$URL_SB
+sleep 20
 
 fin drush sql-drop -y --uri=$URL_TL
 fin drush sql-cli < $PROJECT_ROOT/db/default_tooll.sql --uri=$URL_TL
+sleep 20
 
 fin drush sql-drop -y --uri=$URL_WIN
 fin drush sql-cli < $PROJECT_ROOT/db/default_winsport.sql --uri=$URL_WIN
+sleep 20
+
 echo-green "\n"
 
 # Running Drush commands
