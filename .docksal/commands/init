@@ -63,21 +63,23 @@ echo -e "${green_bg} Step 2 ${NC}${green} Initializing site...${NC}"
 # We nee do catch error if any
 set +e
 
-fin ps
-
-echo-yellow "Current user..."
-echo "$USER"
+echo-yellow "Remove dbs..."
+fin db cli drop database default
+fin db cli drop database sportbaza
+fin db cli drop database tooll
+fin db cli drop database winsport
+echo-green "Done.\n"
 
 echo-yellow "Create dbs..."
-fin db create sportbaza
-fin db create tooll
-fin db create winsport
+fin db cli create database sportbaza
+fin db cli create database tooll
+fin db cli create database winsport
 echo-green "Done.\n"
 
 echo-yellow "Import dbs..."
-fin db import $PROJECT_ROOT/db/default_sportbaza.sql --db=sportbaza --db-user=user --db-password=user
-fin db import $PROJECT_ROOT/db/default_tooll.sql --db=tooll --db-user=user --db-password=user
-fin db import $PROJECT_ROOT/db/default_winsport.sql --db=winsport --db-user=user --db-password=user
+fin db cli import database $PROJECT_ROOT/db/default_sportbaza.sql --db=sportbaza --db-user=user --db-password=user
+fin db cli import database $PROJECT_ROOT/db/default_tooll.sql --db=tooll --db-user=user --db-password=user
+fin db cli import database $PROJECT_ROOT/db/default_winsport.sql --db=winsport --db-user=user --db-password=user
 echo-green "\n"
 
 # Running composer
