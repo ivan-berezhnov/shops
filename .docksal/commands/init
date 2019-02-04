@@ -82,14 +82,16 @@ echo " " >> $DOCROOT_PATH/sites/sites.php
 cat $DOCROOT_PATH/sites/sites.php
 echo-green "Done.\n"
 
-fin drush sa
-
 #echo-yellow "Remove dbs..."
 #fin db drop default
 #fin db drop sportbaza
 #fin db drop tooll
 #fin db drop winsport
 #echo-green "Done.\n"
+
+echo-yellow "Sites..."
+fin drush sa
+echo-green "Done.\n"
 
 echo-yellow "Create dbs..."
 #fin db create sportbaza
@@ -98,13 +100,9 @@ echo-yellow "Create dbs..."
 #cd $DOCROOT_PATH
 fin drush sql-create -y --uri=$URL_SB
 fin drush sql-create -y --uri=$URL_TL
-fin drush sql-create -y --uri=${URL_SB}
+fin drush sql-create -y --uri=$URL_WIN
 echo ''
 fin db ls
-echo-green "Done.\n"
-
-echo-yellow "Site status..."
-fin drush @sites status
 echo-green "Done.\n"
 
 echo-yellow "Import dbs..."
@@ -112,14 +110,14 @@ echo-yellow "Import dbs..."
 #fin db import $PROJECT_ROOT/db/default_tooll.sql --db=tooll --db-user=user --db-password=user
 #fin db import $PROJECT_ROOT/db/default_winsport.sql --db=winsport --db-user=user --db-password=user
 
-fin drush sql-drop -y --uri=${URL_SB}
-fin drush sql-cli < $PROJECT_ROOT/db/default_sportbaza.sql --uri=${URL_SB}
+fin drush sql-drop -y --uri=$URL_SB
+fin drush sql-cli < $PROJECT_ROOT/db/default_sportbaza.sql --uri=$URL_SB
 
-fin drush sql-drop -y --uri=${URL_TL}
-fin drush sql-cli < $PROJECT_ROOT/db/default_tooll.sql --uri=${URL_TL}
+fin drush sql-drop -y --uri=$URL_TL
+fin drush sql-cli < $PROJECT_ROOT/db/default_tooll.sql --uri=$URL_TL
 
-fin drush sql-drop -y --uri=${URL_WIN}
-fin drush sql-cli < $PROJECT_ROOT/db/default_winsport.sql --uri=${URL_WIN}
+fin drush sql-drop -y --uri=$URL_WIN
+fin drush sql-cli < $PROJECT_ROOT/db/default_winsport.sql --uri=$URL_WIN
 echo-green "\n"
 
 # Running Drush commands
@@ -156,13 +154,13 @@ fi
 
 echo "Testing..."
 curl -sL -I http://${URL_SB} | grep "HTTP/1.1 200 OK"
-curl -sL http://${URL_SB} | grep "My Drupal 8 Site"
+#curl -sL http://${URL_SB} | grep "My Drupal 8 Site"
 
 curl -sL -I http://${URL_TL} | grep "HTTP/1.1 200 OK"
-curl -sL http://${URL_TL} | grep "My Drupal 8 Site"
+#curl -sL http://${URL_TL} | grep "My Drupal 8 Site"
 
 curl -sL -I http://${URL_WIN} | grep "HTTP/1.1 200 OK"
-curl -sL http://${URL_WIN} | grep "My Drupal 8 Site"
+#curl -sL http://${URL_WIN} | grep "My Drupal 8 Site"
 
 echo-green " <<<<<<< Rebuild is complete >>>>>>> "
 

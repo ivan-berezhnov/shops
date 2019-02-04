@@ -55,7 +55,3 @@
  * @see \Drupal\Core\DrupalKernel::getSitePath()
  * @see https://www.drupal.org/documentation/install/multi-site
  */
-
-if (file_exists($app_root . '/sites/sites.local.php')) {
-  include $app_root . '/sites/sites.local.php';
-}
