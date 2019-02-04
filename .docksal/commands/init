@@ -63,23 +63,37 @@ echo -e "${green_bg} Step 2 ${NC}${green} Initializing site...${NC}"
 # We nee do catch error if any
 set +e
 
-echo-yellow "Remove dbs..."
-fin db cli drop database default
-fin db cli drop database sportbaza
-fin db cli drop database tooll
-fin db cli drop database winsport
-echo-green "Done.\n"
+#echo-yellow "Remove dbs..."
+#fin db drop default
+#fin db drop sportbaza
+#fin db drop tooll
+#fin db drop winsport
+#echo-green "Done.\n"
 
 echo-yellow "Create dbs..."
-fin db cli create database sportbaza
-fin db cli create database tooll
-fin db cli create database winsport
+#fin db create sportbaza
+#fin db create tooll
+#fin db create winsport
+
+cd $DOCROOT_PATH/sites/sportbaza
+fin drush sql-create -y
+cd $DOCROOT_PATH/sites/tooll
+fin drush sql-create -y
+cd $DOCROOT_PATH/sites/winsport
+fin drush sql-create -y
 echo-green "Done.\n"
 
 echo-yellow "Import dbs..."
-fin db cli import database $PROJECT_ROOT/db/default_sportbaza.sql --db=sportbaza --db-user=user --db-password=user
-fin db cli import database $PROJECT_ROOT/db/default_tooll.sql --db=tooll --db-user=user --db-password=user
-fin db cli import database $PROJECT_ROOT/db/default_winsport.sql --db=winsport --db-user=user --db-password=user
+#fin db import $PROJECT_ROOT/db/default_sportbaza.sql --db=sportbaza --db-user=user --db-password=user
+#fin db import $PROJECT_ROOT/db/default_tooll.sql --db=tooll --db-user=user --db-password=user
+#fin db import $PROJECT_ROOT/db/default_winsport.sql --db=winsport --db-user=user --db-password=user
+
+cd $DOCROOT_PATH/sites/sportbaza
+fin drush drush sql-connect < $PROJECT_ROOT/db/default_sportbaza.sql
+cd $DOCROOT_PATH/sites/tooll
+fin drush drush sql-connect < $PROJECT_ROOT/db/default_tooll.sql
+cd $DOCROOT_PATH/sites/winsport
+fin drush drush sql-connect < $PROJECT_ROOT/db/default_winsport.sql
 echo-green "\n"
 
 # Running composer
