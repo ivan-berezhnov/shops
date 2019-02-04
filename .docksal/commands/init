@@ -30,9 +30,9 @@ function ctrl_c() {
 DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
 MAIN_THEME_PATH="${DOCROOT_PATH}/themes/${THEME_NAME}"
 THEME_PATH_INSIDE_CONTAINER="/var/www/${DOCROOT}/themes/${THEME_NAME}"
-URL_SB = "sb.${VIRTUAL_HOST}"
-URL_TL = "tl.${VIRTUAL_HOST}"
-URL_WIN = "win.${VIRTUAL_HOST}"
+URL_SB="sb.${VIRTUAL_HOST}"
+URL_TL="tl.${VIRTUAL_HOST}"
+URL_WIN="win.${VIRTUAL_HOST}"
 
 # Console colors
 red='\033[0;31m'
