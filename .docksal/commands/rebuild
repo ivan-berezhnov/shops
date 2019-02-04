@@ -102,6 +102,14 @@ fin db import $PROJECT_ROOT/db/default_tooll.sql --db=tooll --db-user=user --db-
 fin db import $PROJECT_ROOT/db/default_winsport.sql --db=winsport --db-user=user --db-password=user
 echo-green "\n"
 
+echo-yellow "Configuration file for multi-site..."
+echo "<?php" > $DOCROOT_PATH/sites/sites.local.php
+echo "\$sites['sb.${VIRTUAL_HOST}'] = 'sportbaza';" >> $DOCROOT_PATH/sites/sites.local.php
+echo "\$sites['win.${VIRTUAL_HOST}'] = 'winsport';" >> $DOCROOT_PATH/sites/sites.local.php
+echo "\$sites['tl.${VIRTUAL_HOST}'] = 'tooll';" >> $DOCROOT_PATH/sites/sites.local.php
+cat $DOCROOT_PATH/sites/sites.local.php
+echo-green "Done.\n"
+
 # Running composer
 echo-yellow "Running composer install"
 cd $PROJECT_ROOT
@@ -112,17 +120,17 @@ echo-green "Done.\n"
 echo-yellow "Running drush cim, drush updb, drush cr"
 echo-yellow " > sportbaza"
 cd $DOCROOT_PATH
-fin drush updb -y --uri=sb.shop.docksal
-fin drush cim -y --uri=sb.shop.docksal
-fin drush cr --uri=sb.shop.docksal
+fin drush updb -y --uri=sb.$VIRTUAL_HOST
+fin drush cim -y --uri=sb.$VIRTUAL_HOST
+fin drush cr --uri=sb.$VIRTUAL_HOST
 echo-yellow " > tooll"
-fin drush updb -y --uri=tl.shop.docksal
-fin drush cim -y --uri=tl.shop.docksal
-fin drush cr --uri=tl.shop.docksal
+fin drush updb -y --uri=tl.$VIRTUAL_HOST
+fin drush cim -y --uri=tl.$VIRTUAL_HOST
+fin drush cr --uri=tl.$VIRTUAL_HOST
 echo-yellow " > winsport"
-fin drush updb -y --uri=win.shop.docksal
-fin drush cim -y --uri=win.shop.docksal
-fin drush cr --uri=win.shop.docksal
+fin drush updb -y --uri=win.$VIRTUAL_HOST
+fin drush cim -y --uri=win.$VIRTUAL_HOST
+fin drush cr --uri=win.$VIRTUAL_HOST
 echo-green "Done.\n"
 
 ## Building theme
@@ -131,7 +139,7 @@ echo-green "Done.\n"
 
 echo-green " <<<<<<< Rebuild is complete >>>>>>> "
 
-echo-green " You can open: http://sp.shop.docksal "
-echo-green "               http://win.shop.docksal "
-echo-green "               http://tl.shop.docksal "
+echo-green " You can open: http://sp.${VIRTUAL_HOST}${NC} "
+echo-green "               http://win.${VIRTUAL_HOST}${NC} "
+echo-green "               http://tl.${VIRTUAL_HOST}${NC} "
 echo
