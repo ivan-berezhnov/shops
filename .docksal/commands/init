@@ -74,9 +74,11 @@ echo-green "Done.\n"
 
 echo-yellow "Configuration file for multi-site..."
 echo "<?php" > $DOCROOT_PATH/sites/sites.local.php
-echo "\$sites['${URL_SB}'] = 'sportbaza';" >> $DOCROOT_PATH/sites/sites.local.php
-echo "\$sites['${URL_TL}'] = 'tooll';" >> $DOCROOT_PATH/sites/sites.local.php
-echo "\$sites['${URL_WIN}'] = 'winsport';" >> $DOCROOT_PATH/sites/sites.local.php
+echo "// @codingStandardsIgnoreFile" >> $DOCROOT_PATH/sites/sites.local.php
+echo "\$sites['${URL_SB}'] = 'sportbaza';" >> $DOCROOT_PATH/sites/sites.php
+echo "\$sites['${URL_TL}'] = 'tooll';" >> $DOCROOT_PATH/sites/sites.php
+echo "\$sites['${URL_WIN}'] = 'winsport';" >> $DOCROOT_PATH/sites/sites.php
+echo " " >> $DOCROOT_PATH/sites/sites.php
 cat $DOCROOT_PATH/sites/sites.local.php
 echo-green "Done.\n"
 
@@ -96,7 +98,8 @@ echo-yellow "Create dbs..."
 #cd $DOCROOT_PATH
 fin drush sql-create -y --uri=$URL_SB
 fin drush sql-create -y --uri=$URL_TL
-fin drush sql-create -y --uri=$URL_WIN
+fin drush sql-create -y --uri=${URL_SB}
+echo ''
 fin db ls
 echo-green "Done.\n"
 
@@ -109,14 +112,14 @@ echo-yellow "Import dbs..."
 #fin db import $PROJECT_ROOT/db/default_tooll.sql --db=tooll --db-user=user --db-password=user
 #fin db import $PROJECT_ROOT/db/default_winsport.sql --db=winsport --db-user=user --db-password=user
 
-fin drush sql-drop -y --uri=$URL_SB
-fin drush sql-cli < $PROJECT_ROOT/db/default_sportbaza.sql --uri=$URL_SB
+fin drush sql-drop -y --uri=${URL_SB}
+fin drush sql-cli < $PROJECT_ROOT/db/default_sportbaza.sql --uri=${URL_SB}
 
-fin drush sql-drop -y --uri=tl.$VIRTUAL_HOST
-fin drush sql-cli < $PROJECT_ROOT/db/default_tooll.sql --uri=tl.$VIRTUAL_HOST
+fin drush sql-drop -y --uri=${URL_TL}
+fin drush sql-cli < $PROJECT_ROOT/db/default_tooll.sql --uri=${URL_TL}
 
-fin drush sql-drop -y --uri=win.$VIRTUAL_HOST
-fin drush sql-cli < $PROJECT_ROOT/db/default_winsport.sql --uri=win.$VIRTUAL_HOST
+fin drush sql-drop -y --uri=${URL_WIN}
+fin drush sql-cli < $PROJECT_ROOT/db/default_winsport.sql --uri=${URL_WIN}
 echo-green "\n"
 
 # Running Drush commands
@@ -140,11 +143,32 @@ echo-green "Done.\n"
 #echo-yellow "Running gulp tasks in theme ${MAIN_THEME}"
 #fin gulp build
 
+# Site initialization
+echo -e "${green_bg} Step 3 ${NC}${green} Test: sites running...${NC}"
+
+# Abort if anything fails
+set -e
+
+# Debug mode switch
+if [[ "${DEBUG}" != "" ]]; then
+    set -x
+fi
+
+echo "Testing..."
+curl -sL -I http://${URL_SB} | grep "HTTP/1.1 200 OK"
+curl -sL http://${URL_SB} | grep "My Drupal 8 Site"
+
+curl -sL -I http://${URL_TL} | grep "HTTP/1.1 200 OK"
+curl -sL http://${URL_TL} | grep "My Drupal 8 Site"
+
+curl -sL -I http://${URL_WIN} | grep "HTTP/1.1 200 OK"
+curl -sL http://${URL_WIN} | grep "My Drupal 8 Site"
+
 echo-green " <<<<<<< Rebuild is complete >>>>>>> "
 
-echo-green " You can open: http://sp.${VIRTUAL_HOST}${NC} "
-echo-green "               http://win.${VIRTUAL_HOST}${NC} "
-echo-green "               http://tl.${VIRTUAL_HOST}${NC} "
+echo-green " You can open: http://${URL_SB}${NC} "
+echo-green "               http://${URL_TL}${NC} "
+echo-green "               http://${URL_WIN}${NC} "
 echo
 
 
