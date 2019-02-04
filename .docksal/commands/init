@@ -102,9 +102,9 @@ echo-yellow "Import dbs..."
 #fin db import $PROJECT_ROOT/db/default_tooll.sql --db=tooll --db-user=user --db-password=user
 #fin db import $PROJECT_ROOT/db/default_winsport.sql --db=winsport --db-user=user --db-password=user
 
-fin drush drush sql-connect < $PROJECT_ROOT/db/default_sportbaza.sql --uri=$URL_SB
-fin drush drush sql-connect < $PROJECT_ROOT/db/default_tooll.sql --uri=tl.$VIRTUAL_HOST
-fin drush drush sql-connect < $PROJECT_ROOT/db/default_winsport.sql --uri=win.$VIRTUAL_HOST
+fin drush sql-cli < $PROJECT_ROOT/db/default_sportbaza.sql --uri=$URL_SB
+fin drush sql-cli < $PROJECT_ROOT/db/default_tooll.sql --uri=tl.$VIRTUAL_HOST
+fin drush sql-cli < $PROJECT_ROOT/db/default_winsport.sql --uri=win.$VIRTUAL_HOST
 echo-green "\n"
 
 # Running Drush commands
