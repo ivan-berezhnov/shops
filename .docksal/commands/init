@@ -136,19 +136,21 @@ if [[ "${DEBUG}" != "" ]]; then
     set -x
 fi
 
+printenv
+
 echo "Testing..."
 # TODO: Implement some tests.
 curl -sL -I http://${APACHE_BASIC_AUTH_USER}:${APACHE_BASIC_AUTH_PASS}@${URL_SB} | grep "HTTP/1.1 200 OK"
 #curl -sL http://${URL_SB} | grep "My Drupal 8 Site"
 
-#curl -sL -I http://${HTTP_USER}:${HTTP_PASS}@${URL_TL} | grep "HTTP/1.1 200 OK"
+curl -sL -I http://${APACHE_BASIC_AUTH_USER}:${APACHE_BASIC_AUTH_PASS}@${URL_TL} | grep "HTTP/1.1 200 OK"
 #curl -sL http://${URL_TL} | grep "My Drupal 8 Site"
 
-#curl -sL -I http://${HTTP_USER}:${HTTP_PASS}@${URL_WIN} | grep "HTTP/1.1 200 OK"
+curl -sL -I http://${APACHE_BASIC_AUTH_USER}:${APACHE_BASIC_AUTH_PASS}@${URL_WIN} | grep "HTTP/1.1 200 OK"
 #curl -sL http://${URL_WIN} | grep "My Drupal 8 Site"
 
 echo -e "${green_bg} Step 4 ${NC}${green} Init build is complete...${NC}"
 
 echo-green " http://${URL_SB}${NC} "
 echo-green " http://${URL_TL}${NC} "
-echo-green " http://${APACHE_BASIC_AUTH_USER}:${APACHE_BASIC_AUTH_PASS}@${URL_WIN}${NC} "
+echo-green " http://${URL_WIN}${NC} "
