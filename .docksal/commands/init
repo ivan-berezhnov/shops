@@ -136,16 +136,17 @@ if [[ "${DEBUG}" != "" ]]; then
     set -x
 fi
 
-printenv
-
-echo "Testing..."
+echo-yellow "Testing..."
 # TODO: Implement some tests.
+echo-yellow " > ${URL_SB}"
 curl -sL -I http://${APACHE_BASIC_AUTH_USER}:${APACHE_BASIC_AUTH_PASS}@${URL_SB} | grep "HTTP/1.1 200 OK"
 #curl -sL http://${URL_SB} | grep "My Drupal 8 Site"
 
+echo-yellow " > ${URL_TL}"
 curl -sL -I http://${APACHE_BASIC_AUTH_USER}:${APACHE_BASIC_AUTH_PASS}@${URL_TL} | grep "HTTP/1.1 200 OK"
 #curl -sL http://${URL_TL} | grep "My Drupal 8 Site"
 
+echo-yellow " > ${URL_WIN}"
 curl -sL -I http://${APACHE_BASIC_AUTH_USER}:${APACHE_BASIC_AUTH_PASS}@${URL_WIN} | grep "HTTP/1.1 200 OK"
 #curl -sL http://${URL_WIN} | grep "My Drupal 8 Site"
 
