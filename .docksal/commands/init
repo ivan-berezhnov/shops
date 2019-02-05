@@ -2,14 +2,12 @@
 
 ## SHOPS Docksal package, v1.0
 ##
-## @author Anton Trokhymenko antroxim@gmail.com
+## @author Ivan Berezhnov <ivan.berezhnov@icloud.com>
 ##
 ## Docksal custom command rebuild script
-## Syncs DB from Pantheon environment, @see PANTHEON_ENV setting below
+## Syncs DB from Host environment.
 ## Runs composer, drush cim, drush updb, drush cr
-## Builds theme @see scripts/build_theme.sh
-##
-## TODO: Add ability to force new Pantheon backup to be create for latest DB sync
+## Builds theme @see fin gulp
 ##
 ## Usage: fin rebuild
 
@@ -47,8 +45,6 @@ echo-green () { echo -e "${green}$1${NC}"; }
 echo-green-bg () { echo -e "${green_bg}$1${NC}"; }
 echo-yellow () { echo -e "${yellow}$1${NC}"; }
 
-#-------------------------- Execution --------------------------------
-
 # Stack initialization
 echo -e "${green_bg} Step 1 ${NC}${green} Initializing stack...${NC}"
 if [[ $DOCKER_RUNNING == "true" ]]; then
@@ -56,8 +52,8 @@ if [[ $DOCKER_RUNNING == "true" ]]; then
 else
 	fin up
 fi
-echo "Waiting 15s for container to start...";
-sleep 15
+echo "Waiting 10s for container to start...";
+sleep 10
 
 # Site initialization
 echo -e "${green_bg} Step 2 ${NC}${green} Initializing site...${NC}"
@@ -79,44 +75,32 @@ echo "\$sites['${URL_SB}'] = 'sportbaza';" >> $DOCROOT_PATH/sites/sites.php
 echo "\$sites['${URL_TL}'] = 'tooll';" >> $DOCROOT_PATH/sites/sites.php
 echo "\$sites['${URL_WIN}'] = 'winsport';" >> $DOCROOT_PATH/sites/sites.php
 echo " " >> $DOCROOT_PATH/sites/sites.php
+rm -rf $DOCROOT_PATH/sites/default
 cat $DOCROOT_PATH/sites/sites.php
 echo-green "Done.\n"
 
 echo-yellow "Create dbs..."
 fin drush sql-create -y --uri=$URL_SB
-sleep 5
-
+sleep 2
 fin drush sql-create -y --uri=$URL_TL
-sleep 5
-
+sleep 2
 fin drush sql-create -y --uri=$URL_WIN
-sleep 5
-
+sleep 2
 echo ''
 fin db ls
 echo-green "Done.\n"
 
 echo-yellow "Import dbs..."
-
 fin db import $PROJECT_ROOT/db/default_sportbaza.sql --db=sportbaza --db-user=root --db-password=root
 sleep 5
 fin db import $PROJECT_ROOT/db/default_tooll.sql --db=tooll --db-user=root --db-password=root
 sleep 5
 fin db import $PROJECT_ROOT/db/default_winsport.sql --db=winsport --db-user=root --db-password=root
 sleep 5
-
-#fin drush sql-drop -y --uri=$URL_SB
-#fin drush sql-cli < $PROJECT_ROOT/db/default_sportbaza.sql --uri=$URL_SB
-#sleep 20
-#
-#fin drush sql-drop -y --uri=$URL_TL
-#fin drush sql-cli < $PROJECT_ROOT/db/default_tooll.sql --uri=$URL_TL
-#sleep 20
-#
-#fin drush sql-drop -y --uri=$URL_WIN
-#fin drush sql-cli < $PROJECT_ROOT/db/default_winsport.sql --uri=$URL_WIN
-#sleep 20
 echo-green "\n"
+
+# Abort if anything fails
+set -e
 
 # Running Drush commands
 echo-yellow "Running drush cim, drush updb, drush cr"
@@ -136,7 +120,7 @@ fin drush cr --uri=$URL_WIN
 echo-green "Done.\n"
 
 ## Building theme
-#echo-yellow "Running gulp tasks in theme ${MAIN_THEME}"
+echo-yellow "Running gulp tasks in theme ${MAIN_THEME}"
 #fin gulp build
 
 # Site initialization
@@ -159,13 +143,3 @@ curl -sL -I http://${URL_TL} | grep "HTTP/1.1 200 OK"
 
 curl -sL -I http://${URL_WIN} | grep "HTTP/1.1 200 OK"
 #curl -sL http://${URL_WIN} | grep "My Drupal 8 Site"
-
-echo-green " <<<<<<< Rebuild is complete >>>>>>> "
-
-echo-green " You can open: http://${URL_SB}${NC} "
-echo-green "               http://${URL_TL}${NC} "
-echo-green "               http://${URL_WIN}${NC} "
-echo
-
-
-#-------------------------- END: Execution --------------------------------
