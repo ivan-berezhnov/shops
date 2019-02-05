@@ -73,6 +73,7 @@ docroot/themes/contrib
 docroot/core
 docroot/charge.php
 docroot/sites/default
+docroot/sites/sites.php
 
 # Ignore paths that contain user-generated content.
 docroot/sites/*/files
