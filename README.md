@@ -2,7 +2,8 @@
 
 Experimental Docksal build
 
-circleCI: https://circleci.com/gh/ivan-berezhnov/shops
+CircleCI: `https://circleci.com/gh/ivan-berezhnov/shops`
+
 Virtualhost: `http://shop.docksal/`
 
 ### Development stack
