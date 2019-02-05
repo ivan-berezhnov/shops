@@ -135,10 +135,10 @@ if [[ "${DEBUG}" != "" ]]; then
 fi
 
 echo "Testing..."
-curl -sL -I http://${URL_SB} | grep "HTTP/1.1 200 OK"
+curl -sL -I http://$HTTP_USER:$HTTP_PASS@${URL_SB} | grep "HTTP/1.1 200 OK"
 #curl -sL http://${URL_SB} | grep "My Drupal 8 Site"
 
-curl -sL -I http://${URL_TL} | grep "HTTP/1.1 200 OK"
+curl -sL -I http://${HTTP_USER}:${HTTP_PASS}@${URL_TL} | grep "HTTP/1.1 200 OK"
 #curl -sL http://${URL_TL} | grep "My Drupal 8 Site"
 
 curl -sL -I http://${URL_WIN} | grep "HTTP/1.1 200 OK"
