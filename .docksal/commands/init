@@ -143,3 +143,9 @@ curl -sL -I http://${URL_TL} | grep "HTTP/1.1 200 OK"
 
 curl -sL -I http://${URL_WIN} | grep "HTTP/1.1 200 OK"
 #curl -sL http://${URL_WIN} | grep "My Drupal 8 Site"
+
+echo -e "${green_bg} Step 4 ${NC}${green} Init build is complete...${NC}"
+
+echo-green " http://${URL_SB}${NC} "
+echo-green " http://${URL_TL}${NC} "
+echo-green " http://${URL_WIN}${NC} "
