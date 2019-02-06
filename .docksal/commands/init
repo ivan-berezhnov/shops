@@ -45,8 +45,6 @@ echo-green () { echo -e "${green}$1${NC}"; }
 echo-green-bg () { echo -e "${green_bg}$1${NC}"; }
 echo-yellow () { echo -e "${yellow}$1${NC}"; }
 
-echo "PROJECT_INACTIVITY_TIMEOUT=0.1h" >> $PROJECT_ROOT/.docksal/docksal.env
-
 # Stack initialization
 echo -e "${green_bg} Step 1 ${NC}${green} Initializing stack...${NC}"
 if [[ $DOCKER_RUNNING == "true" ]]; then
