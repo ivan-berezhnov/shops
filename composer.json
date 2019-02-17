@@ -10,7 +10,6 @@
         "drupal/adminimal_theme": "^1.3",
         "drupal/better_exposed_filters": "^3.0@alpha",
         "drupal/color_field": "2.0-rc4",
-        "drupal/conditional_fields": "^1.0@alpha",
         "drupal/config_split": "^1.3",
         "drupal/console": "^1.0.2",
         "drupal/contribute": "^5.0@beta",
@@ -39,17 +38,21 @@
         "drupal/restrict_by_ip": "4.x-dev",
         "drupal/restrict_ip": "^1.3",
         "drupal/search_api": "^1.10",
-        "drupal/select2": "^1.1",
+        "drupal/sendgrid_integration": "^1.2",
+        "drupal/simple_fb_connect": "^3.1",
         "drupal/stage_file_proxy": "^1.0@alpha",
+        "drupal/select2": "^1.1",
         "drupal/twig_field_value": "^1.1",
         "drupal/twig_tweak": "^2.1",
         "drupal/video_embed_field": "^2.0",
         "drupal/views_infinite_scroll": "^1.5",
         "drupal/viewsreference": "^1.2",
         "drupal/webform": "^5.0@RC",
+        "drupal/commerce": "2.11",
+        "drupal/commerce_liqpay_gateway": "^1.0",
+        "drupal/yoast_seo": "^1.3",
         "drush/drush": "~8.0|^9.0.0-beta8",
-        "enyo/dropzone": "4.3",
-        "drupal/commerce": "^2.6",
+        "enyo/dropzone": "^5.5",
         "hussainweb/drupal-composer-helper": "^1.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "zaporylie/composer-drupal-optimizations": "^1.0"
@@ -65,8 +68,8 @@
     },
     "authors": [
         {
-            "name": "Anatoliy Polyakov",
-            "email": "anatoliy.polyakov@door3.com"
+            "name": "Ivan Berezhnov",
+            "email": "ivan.berezhnov@icloud.com"
         }
     ],
     "repositories": [
@@ -78,10 +81,22 @@
             "type": "package",
             "package": {
                 "name": "enyo/dropzone",
-                "version": "v4.3.0",
+                "version": "v5.5.0",
                 "type": "drupal-library",
                 "dist": {
-                    "url": "https://github.com/enyo/dropzone/archive/v4.3.0.zip",
+                    "url": "https://github.com/enyo/dropzone/archive/v5.5.0.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "bgrins/spectrum",
+                "version": "1.8.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/bgrins/spectrum/archive/1.8.0.zip",
                     "type": "zip"
                 }
             }
@@ -119,10 +134,6 @@
             },
             "drupal/views_infinite_scroll": {
                 "Different item count for 1st and other pages": "https://www.drupal.org/files/issues/different_item_count-2852080-9.patch"
-            },
-            "drupal/conditional_fields": {
-                "Filled with value doesn't work": "https://www.drupal.org/files/issues/2018-06-13/field-js-selectors-updated-with-inputs-2911857-9.patch",
-                "Multiple conditions for one field value change": "https://www.drupal.org/files/issues/2018-12-04/multiple-conditions-for-one-field-value-change-3017437-4.patch"
             },
             "drupal/restrict_ip": {
                 "Parameter must be an array or an object that implements Countable": "https://www.drupal.org/files/issues/2018-10-17/restrict_ip-2957482-2.patch"
