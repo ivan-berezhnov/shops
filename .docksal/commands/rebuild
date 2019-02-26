@@ -106,7 +106,7 @@ echo-green "Done.\n"
 
 ## Building theme
 echo-yellow "Running gulp tasks in theme ${MAIN_THEME}"
-#fin gulp build
+fin gulp build
 
 echo-green " <<<<<<< Rebuild is complete >>>>>>> "
 

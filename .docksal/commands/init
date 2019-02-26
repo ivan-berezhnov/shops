@@ -122,7 +122,7 @@ echo-green "Done.\n"
 ## Building theme
 echo-yellow "Running gulp tasks in theme ${MAIN_THEME}"
 # TODO: Implement some themes build.
-#fin gulp build
+fin gulp build
 echo-green "Done.\n"
 
 # Site initialization
