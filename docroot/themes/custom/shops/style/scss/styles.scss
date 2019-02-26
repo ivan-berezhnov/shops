@@ -1,12 +1,18 @@
-@import 'grid-settings';
-@import 'bourbon';
-@import 'neat';
+@import 'custom';
+@import "node_modules/bootstrap/scss/bootstrap";
 
-@import 'variables/**/*.scss';
 @import 'icomoon/icomoon';
-@import 'fontawesome/fontawesome.scss';
-@import 'abstractions/**/*.scss';
-@import 'node_modules/reset-css/sass/reset';
 @import 'node_modules/sass-autoprefixer/scss/prefixes';
-@import 'base/**/*.scss';
-@import 'components/**/*.scss';
+
+@import 'block/**/*.scss';
+@import 'commerce/**/*.scss';
+@import 'content/**/*.scss';
+@import 'dataset/**/*.scss';
+@import 'field/**/*.scss';
+@import 'form/**/*.scss';
+@import 'layout/**/*.scss';
+@import 'mix/**/*.scss';
+@import 'navigation/**/*.scss';
+@import 'paragraph/**/*.scss';
+@import 'user/**/*.scss';
+@import 'views/**/*.scss';

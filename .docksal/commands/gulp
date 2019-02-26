@@ -6,9 +6,9 @@
 ##
 ## Usage: fin gulp <gulpcommand>
 
-THEME_PATH_INSIDE_CONTAINER="/var/www/${DOCROOT}/themes/${THEME_NAME}"
+THEME_PATH_INSIDE_CONTAINER="/var/www/${DOCROOT}/themes/custom/${THEME_NAME}"
 DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
-MAIN_THEME_PATH="${DOCROOT_PATH}/themes/${THEME_NAME}"
+MAIN_THEME_PATH="${DOCROOT_PATH}/themes/custom/${THEME_NAME}"
 
 install_gulp() {
   fin exec "npm install -g gulp"

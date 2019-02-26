@@ -1,0 +1,28 @@
+uuid: 353109b4-50be-4bad-b132-13c3ffa80d5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_phones
+    - field.storage.block_content.field_callbacks
+  module:
+    - link
+id: block_content.block_phones.field_callbacks
+field_name: field_callbacks
+entity_type: block_content
+bundle: block_phones
+label: Callbacks
+description: 'Button link for callbacks.'
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:/'
+    title: Callbacks
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

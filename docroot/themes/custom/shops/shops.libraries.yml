@@ -2,7 +2,7 @@ styles:
   css:
     theme:
       style/css/styles.css: {}
-      'https://fonts.googleapis.com/css?family=Lato|Montserrat': { type: external }
+      'https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800,900': { type: external }
 
 global-header:
   js:
@@ -18,3 +18,21 @@ global-menu:
   dependencies:
   - core/drupal
   - core/jquery.once
+
+global-scripts:
+  js:
+    assets/popper.js/dist/umd/popper.min.js: {minified: true}
+    assets/bootstrap/dist/js/bootstrap.min.js: {minified: true}
+  dependencies:
+    - core/drupal
+    - core/jquery.once
+
+jquery-custom:
+  remote: https://github.com/jquery/jquery
+  version: "3.3.1"
+  license:
+    name: MIT
+    url: https://github.com/jquery/jquery/blob/3.3.1/LICENSE.txt
+    gpl-compatible: true
+  js:
+    assets/jquery/dist/jquery.slim.min.js: {minified: true, weight: -20 }

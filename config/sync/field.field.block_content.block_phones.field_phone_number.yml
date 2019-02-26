@@ -1,0 +1,21 @@
+uuid: 3a661028-04e6-42bb-9881-8a80fbd3adcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_phones
+    - field.storage.block_content.field_phone_number
+  module:
+    - telephone
+id: block_content.block_phones.field_phone_number
+field_name: field_phone_number
+entity_type: block_content
+bundle: block_phones
+label: 'Phone Number'
+description: 'Enter Phone number for your clients.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

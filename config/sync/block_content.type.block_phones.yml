@@ -1,0 +1,8 @@
+uuid: 4789029c-52da-4fed-9539-7005ed0f1fd5
+langcode: en
+status: true
+dependencies: {  }
+id: block_phones
+label: 'Block Phones'
+revision: 0
+description: 'Phone numbers for client and link with recall.'

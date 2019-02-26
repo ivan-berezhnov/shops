@@ -1,0 +1,25 @@
+uuid: 5c04d3e9-3c97-4abf-873d-4634ac9d9db6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - shops
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: shops_branding
+theme: shops
+region: header_header_middle
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site Logo'
+  provider: system
+  label_display: '0'
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

@@ -90,18 +90,6 @@
             }
         },
         {
-            "type": "package",
-            "package": {
-                "name": "bgrins/spectrum",
-                "version": "1.8.0",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://github.com/bgrins/spectrum/archive/1.8.0.zip",
-                    "type": "zip"
-                }
-            }
-        },
-        {
         "type": "package",
         "package": {
           "name": "bgrins/spectrum",

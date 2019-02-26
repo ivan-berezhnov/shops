@@ -1,0 +1,22 @@
+uuid: 3e40b572-5152-4220-94c5-d0a27fa24516
+langcode: en
+status: true
+dependencies:
+  theme:
+    - shops
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: shops_local_tasks
+theme: shops
+region: content
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

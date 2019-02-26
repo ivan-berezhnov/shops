@@ -1,0 +1,22 @@
+uuid: 90cb2b75-db08-42b8-a08a-305e9dbba6c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - shops
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: shops_content
+theme: shops
+region: content
+weight: 3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

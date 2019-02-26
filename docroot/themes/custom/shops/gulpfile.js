@@ -18,6 +18,7 @@ const icomoonBuilder = require('gulp-icomoon-builder');
 var paths = {
   scripts: [
     'js/**/*.js',
+    'js/**/*.js',
     '!js/**/*.min.js'
   ],
   sass: {

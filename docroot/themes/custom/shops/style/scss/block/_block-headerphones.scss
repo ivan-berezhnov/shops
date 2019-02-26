@@ -1,0 +1,44 @@
+#block-headerphones {
+
+
+  a {
+    color: $gray-900;
+    @include hover-focus {
+      color: $gray-900;
+      text-decoration: none;
+    }
+  }
+
+  .dropdown-toggle {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  .dropdown-menu {
+    padding: 0;
+    .dropdown-item {
+      text-align: center;
+
+      &:last-child {
+        @extend .btn;
+        @extend .btn-outline-success;
+
+        a {
+          color: $green;
+
+          @include hover-focus {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &.show {
+    .dropdown-toggle {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

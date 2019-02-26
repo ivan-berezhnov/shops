@@ -1,0 +1,22 @@
+uuid: 534a21b7-5d99-4e15-b938-4d0ec115e639
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - shops
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: shops_help
+theme: shops
+region: content
+weight: 1
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

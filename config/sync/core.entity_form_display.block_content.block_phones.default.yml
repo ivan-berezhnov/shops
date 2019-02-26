@@ -1,0 +1,63 @@
+uuid: 36ec8e5b-b298-45fa-b822-911367419f42
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_phones
+    - field.field.block_content.block_phones.field_callbacks
+    - field.field.block_content.block_phones.field_phone_number
+    - field.field.block_content.block_phones.field_work_time
+  module:
+    - field_layout
+    - layout_discovery
+    - link
+    - telephone
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: block_content.block_phones.default
+targetEntityType: block_content
+bundle: block_phones
+mode: default
+content:
+  field_callbacks:
+    weight: 28
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_phone_number:
+    weight: 27
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_work_time:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

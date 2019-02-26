@@ -1,0 +1,59 @@
+// Options
+$enable-rounded: false;
+
+// Color system
+// Color naming tool
+// http://chir.ag/projects/name-that-color
+
+$green-900: #417505;
+$green-800: lighten($green-900, 10%);
+$green-700: lighten($green-900, 20%);
+$green-600: lighten($green-900, 30%);
+$green-500: lighten($green-900, 40%);
+$green-400: lighten($green-900, 50%);
+$green-300: lighten($green-900, 60%);
+$green-200: lighten($green-900, 70%);
+$green-100: lighten($green-900, 75%);
+
+$greens: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$greens: map-merge(
+    (
+      "100": $green-100,
+      "200": $green-200,
+      "300": $green-300,
+      "400": $green-400,
+      "500": $green-500,
+      "600": $green-600,
+      "700": $green-700,
+      "800": $green-800,
+      "900": $green-900
+    ),
+    $greens
+);
+
+// Typography
+$font-robot: 'Roboto', Arial, sans-serif;
+$font-family-sans-serif: $font-robot;
+
+// Links
+$link-color: $green-800;
+$link-hover-color: darken($link-color, 5%);
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 540px,
+  md: 720px,
+  lg: 1024px,
+  xl: 1240px
+);
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1024px,
+  xl: 1240px
+);
+

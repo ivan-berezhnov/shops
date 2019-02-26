@@ -1,0 +1,53 @@
+
+.top-area {
+  background: $gray-200;
+  margin-bottom: 8px;
+
+  .container > div {
+    @include make-row();
+    height: 50px;
+    align-items: center;
+  }
+}
+
+.header-middle,
+.main-nav {
+  @include make-container();
+  @include make-container-max-widths();
+
+  & > div {
+    @include make-row();
+  }
+}
+
+.header-middle {
+  margin-bottom: 15px;
+}
+
+#block-shops-branding {
+  // TODO: Logo color and text size.
+  $logo-default-color: $gray-900;
+  $logo-rainbow-color: $green-700;
+  $custom-logo-font-size: 2.2rem;
+
+  padding: 10px 0;
+  font-style: italic;
+  letter-spacing: 1.2px;
+  a {
+    @include font-size($custom-logo-font-size);
+    color: $logo-default-color;
+
+    span {
+      color: $logo-rainbow-color;
+    }
+
+    @include hover-focus {
+      color: $logo-default-color;
+      text-decoration: none;
+
+      span {
+        color: $logo-rainbow-color;
+      }
+    }
+  }
+}

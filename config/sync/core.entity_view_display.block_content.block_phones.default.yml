@@ -1,0 +1,51 @@
+uuid: 31f2216b-2438-4a1f-8045-b76c8f4ddf09
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_phones
+    - field.field.block_content.block_phones.field_callbacks
+    - field.field.block_content.block_phones.field_phone_number
+    - field.field.block_content.block_phones.field_work_time
+  module:
+    - layout_builder
+    - link
+    - telephone
+    - text
+third_party_settings:
+  layout_builder:
+    sections: {  }
+id: block_content.block_phones.default
+targetEntityType: block_content
+bundle: block_phones
+mode: default
+content:
+  field_callbacks:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      rel: nofollow
+      url_only: false
+      url_plain: false
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_phone_number:
+    weight: 1
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_work_time:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  langcode: true

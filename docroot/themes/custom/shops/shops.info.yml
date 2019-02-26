@@ -1,6 +1,6 @@
 name: SHOPS theme
 type: theme
-description: Drupal SHOPS website main theme
+description: SHOPS main theme for shops.
 package: SHOPS
 core: 8.x
 base theme: stable
@@ -9,19 +9,22 @@ libraries:
 - shops/global-header
 - shops/global-menu
 - shops/global-scripts
+- shops/jquery-custom
 
 ckeditor_stylesheets:
 - style/css/wysiwyg.css
 
 regions:
-  site_alert: 'Site alert'
-  top_header: 'Top header'
-  header: 'Header'
-  mobile_navigation: 'Mobile navigation'
-  breadcrumb: 'Breadcrumb'
-  help: 'Help'
-  content: 'Content'
-  footer_top: 'Footer Top'
-  footer: 'Footer'
-  footer_bottom: 'Footer Bottom'
-  hidden: 'Hidden Region'
+  header_top_area:      'Header Top Area'
+  header_header_middle: 'Header Middle'
+  header_mobile_nav:    'Header Mobile Nav'
+  header_main_nav:      'Header Main Nav'
+  header_float_nav:     'Header Float Nav'
+  content:       'Content'
+  sidebar_left:  'Sidebar Left'
+  sidebar_right: 'Sidebar Right'
+  footer:        'Footer'
+
+libraries-override:
+  # Replace an entire library.
+  core/jquery: shops/jquery-custom

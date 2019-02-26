@@ -1,0 +1,25 @@
+uuid: 5773ffba-bdca-447e-ba1c-eea0100fb88a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:block_phones:e9840351-3092-4c06-a365-2df5faf13c00'
+  module:
+    - block_content
+  theme:
+    - shops
+id: headerphones
+theme: shops
+region: header_top_area
+weight: 0
+provider: null
+plugin: 'block_content:e9840351-3092-4c06-a365-2df5faf13c00'
+settings:
+  id: 'block_content:e9840351-3092-4c06-a365-2df5faf13c00'
+  label: 'Header Phones'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
