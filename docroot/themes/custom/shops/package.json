@@ -1,7 +1,7 @@
 {
-  "name": "dckyiv",
+  "name": "shops",
   "version": "1.0.0",
-  "description": "AD-CO theme dependencies.",
+  "description": "SHOPs theme dependencies",
   "repository": {
     "type": "git",
     "url": ""
@@ -10,11 +10,7 @@
   "engines": {
     "node": "4.4.4"
   },
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.7"
-  },
+  "dependencies": {},
   "devDependencies": {
     "bourbon": "^4.3.4",
     "bourbon-neat": "^2.1",
