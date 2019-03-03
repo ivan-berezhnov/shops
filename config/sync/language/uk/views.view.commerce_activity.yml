@@ -1,0 +1,30 @@
+label: Діяльність
+display:
+  default:
+    display_title: Головне
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Застосувати
+          reset_button_label: Скинути
+          exposed_sorts_label: 'Впорядкувати за'
+          sort_asc_label: Зрост
+          sort_desc_label: Спад
+      fields:
+        created:
+          label: Дата
+          separator: ', '
+        rendered_entity:
+          label: Повідомлення
+        uid:
+          label: Користувач
+          separator: ', '
+      arguments:
+        source_entity_id:
+          exception:
+            title: Все
+        source_entity_type:
+          exception:
+            title: Все
+  block_1:
+    display_title: Блок

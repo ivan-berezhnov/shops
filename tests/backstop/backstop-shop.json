@@ -1,0 +1,59 @@
+{
+  "viewports": [
+    {
+      "width" : 1920,
+      "height" : 1080,
+      "name" : "desktop"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "data/shop/bitmaps_reference",
+    "bitmaps_test": "data/shop/bitmaps_test",
+    "casper_scripts": "scripts/casper",
+    "html_report": "data/shop/reports/html",
+    "ci_report": "data/shop/reports/junit"
+  },
+  "casperFlags": [
+    "--ignore-ssl-errors=true",
+    "--ssl-protocol=any"
+  ],
+  "engine": "phantomjs",
+  "report" : ["CLI", "CI", "browser"],
+  "debug": false,
+  "scenarios": [
+    {
+      "label": "Passing Test",
+      "referenceUrl" : "http://getbootstrap.com",
+      "url": "http://getbootstrap.com",
+      "hideSelectors": [],
+      "removeSelectors": [
+        "#carbonads-container"
+      ],
+      "selectors": [
+        "header",
+        "main",
+        "body .bs-docs-featurette:nth-of-type(1)",
+        "body .bs-docs-featurette:nth-of-type(2)",
+        "footer",
+        "body"
+      ],
+      "readyEvent": null,
+      "delay": 500,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "onBefore.js",
+      "onReadyScript": "onReady.js"
+    },
+    {
+      "label": "Failing Test",
+      "referenceUrl" : "https://www.google.com/?hl=en",
+      "url" : "https://www.google.com/?hl=ru",
+      "selectors" : [
+        "document"
+      ],
+      "delay" : 500,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript" : "",
+      "onReadyScript" : ""
+    }
+  ]
+}

@@ -75,11 +75,20 @@ We use stage_file_proxy to proxy files from staging to local.
 * Build scss -         `$ fin gulp build`
 * Run watch -          `$ fin gulp watch` 
 
-### probo.ci integration
-Every time you create a pull request - the new probo.ci instance up and live 
-until PR get merged. It updated automatically when code is pushed to PR.   
-probo.ci instance is useful for testing  functionality when reviewing PR.   
+### BackstopJS
 
-Probo.ci project could be found here 
-https://app.probo.ci/#/dashboard/organization/d2320fdf-db40-45d6-8aa2-0514091ec030/overview.
-Links to each build could be found within the project.
+1. Take reference screenshots
+    
+    ```
+    fin backstop reference --config=backstop-shop.json
+    ```
+
+2. Take test screenshots and compare
+
+    ```
+    fin backstop test --config=backstop-shop.json
+    ```
+
+By default BackstopJS is using PhantomJS to take screenshots.  
+You can also use SlimerJS/Firefox by setting `"engine": "slimerjs"` 
+in the [configuration file](tests/backstop/backstop-shop.json).

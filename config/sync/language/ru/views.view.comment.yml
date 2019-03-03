@@ -1,0 +1,100 @@
+label: Комментарии
+display:
+  default:
+    display_title: Основной
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Применить
+          reset_button_label: Сбросить
+          exposed_sorts_label: 'Сортировать по'
+          sort_asc_label: 'По возрастанию'
+          sort_desc_label: 'По убыванию'
+      pager:
+        options:
+          tags:
+            previous: '‹ предыдущая'
+            next: 'следующая ›'
+            first: '« первая'
+            last: 'последняя »'
+          expose:
+            items_per_page_label: 'Элементов на страницу'
+            items_per_page_options_all_label: '- Все -'
+            offset_label: Пропустить
+      fields:
+        comment_bulk_form:
+          action_title: Действие
+        subject:
+          label: Тема
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Автор
+          separator: ', '
+        entity_id:
+          label: Опубликовано
+          separator: ', '
+        changed:
+          label: Обновлено
+          separator: ', '
+        operations:
+          label: Операции
+        name_1:
+          separator: ', '
+      filters:
+        subject:
+          expose:
+            label: Тема
+        combine:
+          expose:
+            label: 'Имя автора'
+        langcode:
+          expose:
+            label: Язык
+      title: Комментарии
+      empty:
+        area_text_custom:
+          content: 'Комментарии отсутствуют.'
+      use_more_text: ещё
+  page_published:
+    display_title: 'Опубликованные комментарии'
+    display_options:
+      menu:
+        title: Комментарии
+  page_unapproved:
+    display_title: 'Неодобренные комментарии'
+    display_options:
+      menu:
+        title: 'Неодобренные комментарии'
+      filters:
+        subject:
+          expose:
+            label: Тема
+        combine:
+          expose:
+            label: 'Имя автора'
+        langcode:
+          expose:
+            label: Язык
+      fields:
+        comment_bulk_form:
+          action_title: Действие
+        subject:
+          label: Тема
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Автор
+          separator: ', '
+        entity_id:
+          label: Опубликовано
+          separator: ', '
+        changed:
+          label: Обновлено
+          separator: ', '
+        operations:
+          label: Операции
+        name_1:
+          separator: ', '

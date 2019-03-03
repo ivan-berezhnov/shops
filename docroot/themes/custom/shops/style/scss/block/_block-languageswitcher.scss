@@ -1,0 +1,10 @@
+#block-languageswitcher {
+  position: relative;
+  height: 30px;
+
+  @extend .col-md-auto;
+
+  .dropdown-base {
+    font-size: 14px;
+  }
+}

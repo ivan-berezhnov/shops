@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+## Run an example BackstopJS configuration
+##
+## Usage: fin backstop-example
+
+# Set project folder name (used to store reports)
+PROJECT_NAME=shop
+
+# Console colors
+red='\033[0;31m'
+green='\033[0;32m'
+green_bg='\033[42m'
+yellow='\033[1;33m'
+NC='\033[0m'
+
+# Run backstop
+# Trim CR(\r) from the output, otherwise there will be issues passing it to the docker binary on Windows.
+BACKSTOPJS="docker exec $(docker-compose ps -q backstop | tr -d '\r') backstop"
+
+$BACKSTOPJS reference --config=backstop-${PROJECT_NAME}.json
+$BACKSTOPJS test --config=backstop-${PROJECT_NAME}.json
+
+# HTML report link
+echo
+echo -e "${green}To view HTML report open: ${NC}"
+echo -e "http://${VIRTUAL_HOST}/tests/backstop/data/${PROJECT_NAME}/reports/html/"

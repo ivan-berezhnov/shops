@@ -1,0 +1,15 @@
+label: 'Последние комментарии'
+description: 'Последние комментарии.'
+display:
+  default:
+    display_title: Основной
+    display_options:
+      title: 'Последние комментарии'
+      empty:
+        area_text_custom:
+          content: 'Комментарии отсутствуют.'
+  block_1:
+    display_title: Блок
+    display_options:
+      block_description: 'Последние комментарии'
+      block_category: 'Списки (Представления)'

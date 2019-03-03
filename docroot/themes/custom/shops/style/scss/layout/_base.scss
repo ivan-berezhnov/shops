@@ -1,3 +1,11 @@
 .layout-container {
   height: 100vh;
 }
+
+a {
+  transition: color .3s ease;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+}

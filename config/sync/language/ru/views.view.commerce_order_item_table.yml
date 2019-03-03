@@ -1,0 +1,28 @@
+display:
+  default:
+    display_title: Основной
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Применить
+          reset_button_label: Сбросить
+          exposed_sorts_label: 'Сортировать по'
+          sort_asc_label: 'По возрастанию'
+          sort_desc_label: 'По убыванию'
+      fields:
+        title:
+          label: Заголовок
+          separator: ', '
+        unit_price__number:
+          label: Цена
+          separator: ', '
+        quantity:
+          label: Количество
+          separator: ', '
+        total_price__number:
+          label: 'Общая стоимость'
+          separator: ', '
+      arguments:
+        order_id:
+          exception:
+            title: Все

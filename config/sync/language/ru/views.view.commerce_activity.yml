@@ -1,0 +1,30 @@
+label: Активность
+display:
+  default:
+    display_title: Основной
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Применить
+          reset_button_label: Сбросить
+          exposed_sorts_label: 'Сортировать по'
+          sort_asc_label: 'По возрастанию'
+          sort_desc_label: 'По убыванию'
+      fields:
+        created:
+          label: Дата
+          separator: ', '
+        rendered_entity:
+          label: Сообщение
+        uid:
+          label: Пользователь
+          separator: ', '
+      arguments:
+        source_entity_id:
+          exception:
+            title: Все
+        source_entity_type:
+          exception:
+            title: Все
+  block_1:
+    display_title: Блок

@@ -1,0 +1,23 @@
+label: Профили
+display:
+  default:
+    display_title: Основной
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Применить
+          reset_button_label: Сбросить
+          exposed_sorts_label: 'Сортировать по'
+          sort_asc_label: 'По возрастанию'
+          sort_desc_label: 'По убыванию'
+      arguments:
+        uid:
+          exception:
+            title: Все
+        type:
+          exception:
+            title: Все
+        status:
+          exception:
+            title: Все
+      title: Профили

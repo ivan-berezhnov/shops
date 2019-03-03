@@ -1,0 +1,22 @@
+display:
+  default:
+    display_title: Головне
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Застосувати
+          reset_button_label: Скинути
+          exposed_sorts_label: 'Впорядкувати за'
+          sort_asc_label: Зрост
+          sort_desc_label: Спад
+      fields:
+        quantity:
+          separator: ', '
+        purchased_entity:
+          separator: ', '
+        total_price__number:
+          separator: ', '
+      arguments:
+        order_id:
+          exception:
+            title: Все

@@ -2,7 +2,7 @@ styles:
   css:
     theme:
       style/css/styles.css: {}
-      'https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800,900': { type: external }
+#      'https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800,900': { type: external }
 
 global-header:
   js:
@@ -23,6 +23,7 @@ global-scripts:
   js:
     assets/popper.js/dist/umd/popper.min.js: {minified: true}
     assets/bootstrap/dist/js/bootstrap.min.js: {minified: true}
+    js/dist/dropdowns.min.js: {minified: true}
   dependencies:
     - core/drupal
     - core/jquery.once

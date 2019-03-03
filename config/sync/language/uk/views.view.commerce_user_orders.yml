@@ -1,0 +1,47 @@
+display:
+  default:
+    display_title: Головне
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Застосувати
+          reset_button_label: Скинути
+          exposed_sorts_label: 'Впорядкувати за'
+          sort_asc_label: Зрост
+          sort_desc_label: Спад
+      pager:
+        options:
+          tags:
+            previous: '‹ Попередня'
+            next: 'Наступна ›'
+            first: '« Перша'
+            last: 'Остання »'
+          expose:
+            items_per_page_label: 'Елементів на сторінку'
+            items_per_page_options_all_label: '- Усе -'
+            offset_label: Зміщення
+      fields:
+        order_id:
+          label: ID
+          separator: ', '
+        order_number:
+          label: 'Номер замовлення'
+          separator: ', '
+        placed:
+          label: Дата
+          separator: ', '
+        total_price__number:
+          label: Всього
+          separator: ', '
+        state:
+          label: Стан
+          separator: ', '
+      title: Замовлення
+      arguments:
+        uid:
+          exception:
+            title: Все
+  order_page:
+    display_options:
+      menu:
+        title: Замовлення

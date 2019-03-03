@@ -1,0 +1,105 @@
+label: Коментарі
+description: 'Пошук коментарів та керування ними.'
+display:
+  default:
+    display_title: Головне
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Застосувати
+          reset_button_label: Скинути
+          exposed_sorts_label: 'Впорядкувати за'
+          sort_asc_label: Зрост
+          sort_desc_label: Спад
+      pager:
+        options:
+          tags:
+            previous: '‹ попередня'
+            next: 'наступна ›'
+            first: '« перша'
+            last: 'остання »'
+          expose:
+            items_per_page_label: 'Елементів на сторінку'
+            items_per_page_options_all_label: '- Усе -'
+            offset_label: Зміщення
+      fields:
+        comment_bulk_form:
+          action_title: Дія
+        subject:
+          label: Тема
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Автор
+          separator: ', '
+        entity_id:
+          label: Опубліковане
+          separator: ', '
+        changed:
+          label: Оновлено
+          separator: ', '
+        operations:
+          label: Операції
+        name_1:
+          separator: ', '
+      filters:
+        subject:
+          expose:
+            label: Тема
+        combine:
+          expose:
+            label: 'Ім’я автора'
+        langcode:
+          expose:
+            label: Мова
+      title: Коментарі
+      empty:
+        area_text_custom:
+          content: 'Коментарі відсутні.'
+      use_more_text: ще
+  page_published:
+    display_title: 'Опубліковані коментарі'
+    display_options:
+      menu:
+        title: Коментарі
+        description: 'Коментарі опубліковано'
+      display_description: 'Список затверджених коментарів.'
+  page_unapproved:
+    display_title: 'Несхвалені коментарі'
+    display_options:
+      menu:
+        title: 'Несхвалені коментарі'
+        description: 'Коментарі не затверджено'
+      display_description: 'Список незатверджених коментарів.'
+      filters:
+        subject:
+          expose:
+            label: Тема
+        combine:
+          expose:
+            label: 'Ім''я автора'
+        langcode:
+          expose:
+            label: Мова
+      fields:
+        comment_bulk_form:
+          action_title: Дія
+        subject:
+          label: Тема
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Автор
+          separator: ', '
+        entity_id:
+          label: Опубліковане
+          separator: ', '
+        changed:
+          label: Оновлено
+          separator: ', '
+        operations:
+          label: Операції
+        name_1:
+          separator: ', '

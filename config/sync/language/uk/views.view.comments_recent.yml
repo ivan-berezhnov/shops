@@ -1,0 +1,15 @@
+label: 'Останні коментарі'
+description: 'Останні коментарі.'
+display:
+  default:
+    display_title: Головне
+    display_options:
+      title: 'Останні коментарі'
+      empty:
+        area_text_custom:
+          content: 'Коментарі відсутні.'
+  block_1:
+    display_title: Блок
+    display_options:
+      block_description: 'Останні коментарі'
+      block_category: 'Списки (Види)'

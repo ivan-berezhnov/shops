@@ -26,19 +26,10 @@
  */
 #}
 
-{%
-  set phone_dropdown = [
-  'dropdown',
-  'col-sm-3',
-]
-%}
-
-<div{{ attributes.addClass(phone_dropdown) }}>
+<div{{ attributes }}>
   {% block content %}
-    <a class="dropdown-toggle" href="#" role="button" id="dropdownPhonesLink" data-toggle="dropdown"
-       aria-haspopup="true" aria-expanded="false">0 800 303 303</a>
-    <div class="dropdown-menu" aria-labelledby="dropdownPhonesLink">
+    <ul class="dropdown-base">
       {{ content }}
-    </div>
+    </ul>
   {% endblock %}
 </div>

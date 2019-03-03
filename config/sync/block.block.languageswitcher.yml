@@ -1,0 +1,20 @@
+uuid: e4801d30-c6ef-4c7f-b63b-8e13e46765dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - shops
+id: languageswitcher
+theme: shops
+region: header_top_area
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,28 @@
+display:
+  default:
+    display_title: Головне
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Застосувати
+          reset_button_label: Скинути
+          exposed_sorts_label: 'Впорядкувати за'
+          sort_asc_label: Зрост
+          sort_desc_label: Спад
+      fields:
+        title:
+          label: Заголовок
+          separator: ', '
+        unit_price__number:
+          label: 'Ціна одиниці товару'
+          separator: ', '
+        quantity:
+          label: Кількість
+          separator: ', '
+        total_price__number:
+          label: 'Загальна вартість'
+          separator: ', '
+      arguments:
+        order_id:
+          exception:
+            title: Все
