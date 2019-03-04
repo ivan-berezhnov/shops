@@ -8,15 +8,13 @@ libraries:
 - shops/styles
 - shops/global-header
 - shops/global-menu
-- shops/global-scripts
-- shops/jquery-custom
 
 ckeditor_stylesheets:
 - style/css/wysiwyg.css
 
 regions:
   header_top_area:      'Header Top Area'
-  header_header_middle: 'Header Middle'
+  header_middle:        'Header Middle'
   header_mobile_nav:    'Header Mobile Nav'
   header_main_nav:      'Header Main Nav'
   header_float_nav:     'Header Float Nav'
@@ -24,7 +22,3 @@ regions:
   sidebar_left:  'Sidebar Left'
   sidebar_right: 'Sidebar Right'
   footer:        'Footer'
-
-libraries-override:
-  # Replace an entire library.
-  core/jquery: shops/jquery-custom

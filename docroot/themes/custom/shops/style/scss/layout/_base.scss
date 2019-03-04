@@ -1,11 +1,35 @@
-.layout-container {
-  height: 100vh;
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-main;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  color: $color-gray-700;
 }
 
 a {
+  color: $link-color;
   transition: color .3s ease;
 
   @include hover-focus {
+    color: $link-color-hover;
     text-decoration: none;
   }
+}
+
+.layout-container {
+  height: 100vh;
 }

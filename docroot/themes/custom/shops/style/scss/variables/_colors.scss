@@ -1,0 +1,47 @@
+// Color naming tool
+// http://chir.ag/projects/name-that-color
+
+
+// Greyscale
+$color-white: #fff;
+$color-gray-100: #f8f9fa;
+$color-gray-200: #e9ecef;
+$color-gray-300: #dee2e6;
+$color-gray-400: #ced4da;
+$color-gray-500: #adb5bd;
+$color-gray-600: #6c757d;
+$color-gray-700: #495057;
+$color-gray-800: #343a40;
+$color-gray-900: #212529;
+$color-black: #000;
+
+
+// Rainbow
+$color-bali-hai:      #93A6B9;
+$color-fountain-blue: #65A3BD;
+$color-chambray:      #3B5998;
+$color-cerulean-blue: #285DAC;
+$color-green-leaf:    #417505;
+$color-chestnut-rose: #CC5447;
+$color-rodeo-dust:    #C7B299;
+$color-golden-grass:  #CCA81A;
+$color-mango-tango:   #E28000;
+$color-wisteria:      #A365BD;
+
+// Greenscale
+$color-green-900: $color-green-leaf;
+$color-green-800: lighten($color-green-900, 5%);
+$color-green-700: lighten($color-green-900, 10%);
+$color-green-600: lighten($color-green-900, 15%);
+$color-green-500: lighten($color-green-900, 20%);
+$color-green-400: lighten($color-green-900, 30%);
+$color-green-300: lighten($color-green-900, 40%);
+$color-green-200: lighten($color-green-900, 55%);
+$color-green-100: lighten($color-green-900, 70%);
+
+// Theme colors
+$color-main: $color-green-700;
+
+// Links
+$link-color: $color-green-700;
+$link-color-hover: darken($link-color, 5%);
