@@ -1,0 +1,5 @@
+#block-languageswitcher {
+  .dropbtn {
+    @include icoMoon('location');
+  }
+}

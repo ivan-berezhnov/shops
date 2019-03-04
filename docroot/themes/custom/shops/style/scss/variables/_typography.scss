@@ -5,4 +5,4 @@ $font-main: 'Roboto', Arial, sans-serif;
 $fontsPath: '../../fonts/';
 
 /* font-family: "ICOMOON"; */
-//@include font-face('Icomoon', $fontsPath+'icomoon/fonts/icomoon',  $file-formats: eot svg ttf woff);
+@include font-face('Icomoon', $fontsPath+'icomoon/fonts/icomoon',  $file-formats: eot svg ttf woff);
