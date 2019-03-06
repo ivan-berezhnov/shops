@@ -34,5 +34,46 @@
 
   /* Change the background color of the dropdown button when the dropdown content is shown */
   &:hover .dropbtn {}
+}
 
+/* The container <div> - needed to position the dropdown content */
+.dropdown_info {
+  position: relative;
+  display: inline-block;
+
+  /* Dropdown Content (Hidden by Default) */
+  &-content {
+    position: absolute;
+    z-index: 1;
+
+    li a {
+      display: none;
+
+      &:hover {
+        display: block !important;
+      }
+    }
+
+    .is-active {
+      display: block !important;
+    }
+
+    /* Links inside the dropdown */
+    a {
+      font-size: .85rem;
+      color: $color-gray-800;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+
+      /* Change color of dropdown links on hover */
+      &:hover {
+        box-shadow: 0 3px 3px 0 rgba(0,0,0,.15);
+        background-color: $color-gray-200;
+      }
+    }
+  }
+
+  /* Show the dropdown menu on hover */
+  &:hover .dropdown-content li {display: block;}
 }

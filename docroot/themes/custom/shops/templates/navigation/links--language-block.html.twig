@@ -35,12 +35,11 @@
 #}
 
 {% if links -%}
-  <div class="dropdown">
-    <div class="dropbtn"></div>
-    <div class="dropdown-content">
+  <div class="dropdown_info">
+    <div class="dropdown_info-content">
       <ul>
         {%- for item in links -%}
-            <li class="menu-item">
+            <li {{ item.attributes }}>
               {{ item.link }}
             </li>
         {%- endfor -%}
