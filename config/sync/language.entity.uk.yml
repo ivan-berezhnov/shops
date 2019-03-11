@@ -1,9 +1,9 @@
 uuid: f1e7e7ea-47a2-49df-ad56-271f74c44c9f
-langcode: en
+langcode: uk
 status: true
 dependencies: {  }
 id: uk
-label: Ukrainian
+label: UA
 direction: ltr
 weight: 2
 locked: false

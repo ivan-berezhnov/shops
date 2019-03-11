@@ -1,6 +1,6 @@
 uuid: 2c157a74-694a-411c-88e2-420547afaa93
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -12,8 +12,8 @@ _core:
   default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
 id: shops_footer
 theme: shops
-region: footer
-weight: -6
+region: secondary_menu
+weight: -7
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
