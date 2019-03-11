@@ -10,8 +10,8 @@ _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
 id: shops_branding
 theme: shops
-region: header_header_middle
-weight: -6
+region: header
+weight: -7
 provider: null
 plugin: system_branding_block
 settings:

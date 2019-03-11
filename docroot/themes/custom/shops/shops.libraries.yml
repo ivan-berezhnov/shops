@@ -2,7 +2,7 @@ styles:
   css:
     theme:
       style/css/styles.css: {}
-#      'https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800,900': { type: external }
+      'https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic': { type: external }
 
 global-header:
   js:

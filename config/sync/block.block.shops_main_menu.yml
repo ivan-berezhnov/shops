@@ -1,6 +1,6 @@
 uuid: cd64d19d-9c3e-4683-8e41-b494c6b12287
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.main
@@ -12,8 +12,8 @@ _core:
   default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
 id: shops_main_menu
 theme: shops
-region: header_main_nav
-weight: -5
+region: primary_menu
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:

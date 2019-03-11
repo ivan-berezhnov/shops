@@ -1,6 +1,6 @@
 uuid: f9658098-c9df-4450-ab82-5f2da25b67ea
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - search
@@ -10,8 +10,8 @@ _core:
   default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
 id: shops_search
 theme: shops
-region: content
-weight: -4
+region: header
+weight: -5
 provider: null
 plugin: search_form_block
 settings:

@@ -1,8 +1,7 @@
 #block-languageswitcher {
   position: relative;
   height: 30px;
-
-  @extend .col-md-auto;
+  z-index: 50;
 
   .dropdown-base {
     font-size: 14px;
