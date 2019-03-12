@@ -25,15 +25,13 @@
  * @see template_preprocess_block()
  */
 #}
-{% set classes = ['col-sm-6'] %}
+{% set classes = ['col-sm-6', 'align-self-center'] %}
 <div{{ attributes.addClass(classes) }}>
-  {% block content %}
-    <div>
-      <ul class="dropdown-base ">
-        {{ content }}
-      </ul>
-    </div>
+  <div class="phones">
+    <p class=""></p>
+  </div>
 
-    <div class="callback"><a href="#">{{ 'Обратный звонок'|t }}</a></div>
+  {% block content %}
+    {{ content }}
   {% endblock %}
 </div>

@@ -4,22 +4,23 @@
   height: 30px;
 
   .dropdown-base {
-    padding: 12px 0 5px 15px;
+    top: 0;
+    padding: 6px 0 5px 10px;
     z-index: 5;
 
     &::after {
-      right: 0.8em;
-      top: 1.9em;
+      right: 0.5em;
+      top: 1.05em;
     }
 
     &.expanded {
       &::after {
-        top: 1.55em;
+        top: 0.8em;
       }
     }
 
     a {
-      font-size: 1.2rem;
+      font-size: 14px;
       font-weight: 300;
     }
 
