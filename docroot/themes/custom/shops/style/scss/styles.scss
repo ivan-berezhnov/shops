@@ -1,18 +1,12 @@
-@import 'custom';
-@import "node_modules/bootstrap/scss/bootstrap";
-
+@import 'bourbon';
 @import 'icomoon/icomoon';
+@import 'node_modules/reset-css/sass/reset';
 @import 'node_modules/sass-autoprefixer/scss/prefixes';
 
-@import 'block/**/*.scss';
-@import 'commerce/**/*.scss';
-@import 'content/**/*.scss';
-@import 'dataset/**/*.scss';
-@import 'field/**/*.scss';
-@import 'form/**/*.scss';
+@import 'base/**/*.scss';
+@import 'blocks/**/*.scss';
+@import 'paragraphs/**/*.scss';
+@import 'component/**/*.scss';
+@import 'jquery-ui/**/*.scss';
 @import 'layout/**/*.scss';
-@import 'mix/**/*.scss';
-@import 'navigation/**/*.scss';
-@import 'paragraph/**/*.scss';
-@import 'user/**/*.scss';
-@import 'views/**/*.scss';
+

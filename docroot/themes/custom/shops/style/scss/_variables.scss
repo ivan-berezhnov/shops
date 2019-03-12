@@ -1,0 +1,55 @@
+/**
+ * FONT FAMILIES
+ */
+$fontsPath: '../fonts/';
+
+// font-family: "ICOMOON";
+@include font-face('Icomoon', $fontsPath+'icomoon/fonts/icomoon',  $file-formats: eot svg ttf woff);
+
+// Main fonts
+$font-main: 'Roboto', Arial, sans-serif;
+//$font-sencond: 'Montserrat', sans-serif;
+
+
+/**
+ * BASIC BREAKPOINTS
+ */
+$bp355: 'screen and (min-width : 355px)';
+$bp580: 'screen and (min-width : 580px)';
+$bp768: 'screen and (min-width : 768px)';
+$bp960: 'screen and (min-width : 960px)';
+$bp1024: 'screen and (min-width : 1024px)';
+$bp1280: 'screen and (min-width : 1280px)';
+$bp1400: 'screen and (min-width : 1400px)';
+
+$bp579max: 'screen and (max-width : 579px)';
+$bp767max: 'screen and (max-width : 767px)';
+$bp959max: 'screen and (max-width : 959px)';
+$bp1279max: 'screen and (max-width : 1279px)';
+
+
+/**
+ * COLOR SYSTEM
+ *
+ * Color naming tool
+ * http://chir.ag/projects/name-that-color
+ */
+$color-white: #fff;
+$color-black: #000;
+
+// Greyscale
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// Rainbow
+$color-limeade: #65C002;
+
+// Site colors
+$color-main: $color-limeade;

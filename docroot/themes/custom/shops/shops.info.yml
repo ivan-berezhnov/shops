@@ -15,15 +15,16 @@ ckeditor_stylesheets:
 - style/css/wysiwyg.css
 
 regions:
-  header_top_area:      'Header Top Area'
-  header_header_middle: 'Header Middle'
-  header_mobile_nav:    'Header Mobile Nav'
-  header_main_nav:      'Header Main Nav'
-  header_float_nav:     'Header Float Nav'
-  content:       'Content'
-  sidebar_left:  'Sidebar Left'
-  sidebar_right: 'Sidebar Right'
-  footer:        'Footer'
+  header_top:     'Header Top'
+  header:         'Header'
+  navigation:     'Header Nav'
+  breadcrumb:     'Breadcrumb'
+  content:        'Content'
+  content_top:    'Content Top'
+  content_bottom: 'Content Bottom'
+  sidebar_first:  'Sidebar First'
+  sidebar_second: 'Sidebar Second'
+  footer:         'Footer'
 
 libraries-override:
   # Replace an entire library.
