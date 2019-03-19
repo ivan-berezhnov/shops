@@ -80,10 +80,10 @@ cat $DOCROOT_PATH/sites/sites.php
 echo-green "Done.\n"
 
 echo-yellow "Create dbs..."
-fin drush sql-create -y --uri=$URL_SB
-sleep 2
-fin drush sql-create -y --uri=$URL_TL
-sleep 2
+#fin drush sql-create -y --uri=$URL_SB
+#sleep 2
+#fin drush sql-create -y --uri=$URL_TL
+#sleep 2
 fin drush sql-create -y --uri=$URL_WIN
 sleep 2
 echo ''
@@ -91,10 +91,10 @@ fin db ls
 echo-green "Done.\n"
 
 echo-yellow "Import dbs..."
-fin db import $PROJECT_ROOT/db/default_sportbaza.sql --db=sportbaza --db-user=root --db-password=root
-sleep 5
-fin db import $PROJECT_ROOT/db/default_tooll.sql --db=tooll --db-user=root --db-password=root
-sleep 5
+#fin db import $PROJECT_ROOT/db/default_sportbaza.sql --db=sportbaza --db-user=root --db-password=root
+#sleep 5
+#fin db import $PROJECT_ROOT/db/default_tooll.sql --db=tooll --db-user=root --db-password=root
+#sleep 5
 fin db import $PROJECT_ROOT/db/default_winsport.sql --db=winsport --db-user=root --db-password=root
 sleep 5
 echo-green "\n"
@@ -106,13 +106,13 @@ set -e
 echo-yellow "Running drush cim, drush updb, drush cr"
 echo-yellow " > sportbaza"
 cd $DOCROOT_PATH
-fin drush updb -y --uri=$URL_SB
-fin drush cim -y --uri=$URL_SB
-fin drush cr --uri=$URL_SB
-echo-yellow " > tooll"
-fin drush updb -y --uri=$URL_TL
-fin drush cim -y --uri=$URL_TL
-fin drush cr --uri=$URL_TL
+#fin drush updb -y --uri=$URL_SB
+#fin drush cim -y --uri=$URL_SB
+#fin drush cr --uri=$URL_SB
+#echo-yellow " > tooll"
+#fin drush updb -y --uri=$URL_TL
+#fin drush cim -y --uri=$URL_TL
+#fin drush cr --uri=$URL_TL
 echo-yellow " > winsport"
 fin drush updb -y --uri=$URL_WIN
 fin drush cim -y --uri=$URL_WIN
