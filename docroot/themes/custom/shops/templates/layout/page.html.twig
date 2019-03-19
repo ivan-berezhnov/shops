@@ -63,7 +63,7 @@
       {{ page.header_user_tools }}
       <div class="header_info--user-tools">
         <div class="user_tool--delivery"><a href="#">{{ 'Free delivery'|t }}</a></div>
-        {#<div class="user_tool--copy"><a href="#">{{ 'Compare'|t }}</a></div>#}
+        <div class="user_tool--copy"><a href="#">{{ 'Compare'|t }}</a></div>
         <div class="user_tool--favorite"><a href="{{ path('commerce_wishlist.page') }}">{{ 'Wishlist'|t }}</a></div>
 
         {% if user.id == 0 %}
