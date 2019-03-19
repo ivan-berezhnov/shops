@@ -62,9 +62,9 @@
       {{ page.header_branding }}
       {{ page.header_user_tools }}
       <div class="header_info--user-tools">
-        <div class="user_tool--delivery"><a href="#">Бесплатная доставка</a></div>
-        <div class="user_tool--copy"><a href="#">Сравнение товара</a></div>
-        <div class="user_tool--favorite"><a href="#">Желания</a></div>
+        <div class="user_tool--delivery"><a href="#">{{ 'Free delivery'|t }}</a></div>
+        {#<div class="user_tool--copy"><a href="#">{{ 'Compare'|t }}</a></div>#}
+        <div class="user_tool--favorite"><a href="{{ path('commerce_wishlist.page') }}">{{ 'Wishlist'|t }}</a></div>
 
         {% if user.id == 0 %}
           <div class="user_tool--user"><a href="{{ path('user.login') }}">{{ 'Login'|t }}</a></div>
