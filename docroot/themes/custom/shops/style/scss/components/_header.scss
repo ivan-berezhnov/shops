@@ -1,7 +1,7 @@
 $menu-link-color: $gray-600;
 
 .header {
-
+  @extend .mb-3;
 }
 
 .header_top {

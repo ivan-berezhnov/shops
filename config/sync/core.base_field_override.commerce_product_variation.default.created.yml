@@ -1,0 +1,18 @@
+uuid: 5d2eb866-c742-47e7-a5b9-058d5b008876
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.default
+id: commerce_product_variation.default.created
+field_name: created
+entity_type: commerce_product_variation
+bundle: default
+label: Created
+description: 'The time when the variation was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

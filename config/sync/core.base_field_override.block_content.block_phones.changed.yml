@@ -1,0 +1,18 @@
+uuid: 853cb7c8-86c8-4fc6-bfdb-1c692197e615
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_phones
+id: block_content.block_phones.changed
+field_name: changed
+entity_type: block_content
+bundle: block_phones
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed
