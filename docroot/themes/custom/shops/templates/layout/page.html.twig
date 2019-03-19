@@ -42,18 +42,67 @@
  * @see html.html.twig
  */
 #}
-<header>
-  {{ page.header_top }}
-  {{ page.header }}
-  {{ page.navigation }}
+
+<header class="header">
+
+  <div class="header_top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 header_top--phone">
+          {{ page.header_phone }}
+        </div>
+        {{ page.header_info_menu }}
+        {{ page.header_lang }}
+      </div>
+    </div>
+  </div>
+
+  <div class="header_info container">
+    <div class="row">
+      {{ page.header_branding }}
+      {{ page.header_user_tools }}
+      <div class="header_info--user-tools">
+        <div class="user_tool--delivery"><a href="#">Бесплатная доставка</a></div>
+        <div class="user_tool--copy"><a href="#">Сравнение товара</a></div>
+        <div class="user_tool--favorite"><a href="#">Желания</a></div>
+        <div class="user_tool--user"><a href="#">Войти</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header_menu container">
+    <div class="row">
+
+      {{ page.header_catalog }}
+      {#{{ page.header_search }}#}
+
+      <div class="header_menu--search col-sm-7">
+        <form class="search-form">
+          <div class="form-group">
+            <label for="search" class="sr-only">Поиск</label>
+            <input type="text" class="form-control" id="search" placeholder="Найти обитрек">
+          </div>
+          <button type="submit" class="btn btn-primary ml-auto"></button>
+        </form>
+      </div>
+
+      {{ page.header_filter }}
+      {{ page.header_basket }}
+
+      <!--<div class="header_menu&#45;&#45;filter col-sm-2">Подбор</div>-->
+      <div class="header_menu--basket col-sm-2">
+        <a href="#" class="btn btn-link">Корзина</a>
+      </div>
+
+    </div>
+  </div>
+
 </header>
 
-<main role="main">
+
+<main role="main" class="content">
   <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
   <div class="container">
-    {% if page.breadcrumb %}
-      {{ page.breadcrumb }}
-    {% endif %}
     <div class="row">
       {% if page.sidebar_first %}
         <aside class="main__sidebar--first">
@@ -62,9 +111,9 @@
       {% endif %}
 
       {% if page.content_top %}
-      <section class="main__content--top">
-        {{ page.content_top }}
-      </section>
+        <section class="main__content--top">
+          {{ page.content_top }}
+        </section>
       {% endif %}
 
       <section class="main__content">
@@ -72,9 +121,9 @@
       </section>
 
       {% if page.content_bottom %}
-      <section class="main__content--bottom">
-        {{ page.content_bottom }}
-      </section>
+        <section class="main__content--bottom">
+          {{ page.content_bottom }}
+        </section>
       {% endif %}
 
       {% if page.sidebar_second %}
@@ -87,7 +136,7 @@
 </main>
 
 {% if page.footer %}
-  <footer>
+  <footer class="footer">
     <div class="footer">
       {{ page.footer }}
     </div>

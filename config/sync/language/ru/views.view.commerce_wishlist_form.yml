@@ -1,0 +1,24 @@
+display:
+  default:
+    display_title: Основной
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Применить
+          reset_button_label: Сбросить
+          exposed_sorts_label: 'Сортировать по'
+          sort_asc_label: 'По возрастанию'
+          sort_desc_label: 'По убыванию'
+      fields:
+        title:
+          separator: ', '
+        purchasable_entity:
+          separator: ', '
+        edit_quantity:
+          label: Количество
+        remove_button:
+          label: Удалить
+      arguments:
+        wishlist_id:
+          exception:
+            title: Все

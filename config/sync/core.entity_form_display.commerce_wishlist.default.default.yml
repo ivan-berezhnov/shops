@@ -1,0 +1,52 @@
+uuid: 05902077-7f53-4544-93d1-79d6daa3c1fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_wishlist.commerce_wishlist_type.default
+    - field.field.commerce_wishlist.default.wishlist_items
+  module:
+    - field_layout
+    - inline_entity_form
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+_core:
+  default_config_hash: DJdWvvwDEe4CBoHRiYuj0rDfpbdwTzqjPUNPtn7VEqo
+id: commerce_wishlist.default.default
+targetEntityType: commerce_wishlist
+bundle: default
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  shipping_profile:
+    type: options_select
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  wishlist_items:
+    type: inline_entity_form_complex
+    weight: 2
+    settings:
+      override_labels: true
+      label_singular: 'wishlist item'
+      label_plural: 'wishlist items'
+      allow_new: true
+      match_operator: CONTAINS
+      allow_existing: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  is_default: true
+  uid: true

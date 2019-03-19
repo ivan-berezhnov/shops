@@ -1,0 +1,12 @@
+uuid: 13193f2d-71d8-49ed-8f8b-fe72bc1c6f8f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: YrZiHyTtY5F_adZsAd87_mUYUSYNMP-IKGiA1sbYAfM
+label: Default
+id: default
+allowAnonymous: false
+allowMultiple: true
+allowPublic: true
+wishlistFormView: commerce_wishlist_form

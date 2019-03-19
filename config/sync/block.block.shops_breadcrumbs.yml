@@ -10,8 +10,8 @@ _core:
   default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
 id: shops_breadcrumbs
 theme: shops
-region: content
-weight: -2
+region: content_top
+weight: -7
 provider: null
 plugin: system_breadcrumb_block
 settings:

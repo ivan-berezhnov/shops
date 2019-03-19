@@ -1,7 +1,7 @@
 {
-  "name": "dckyiv",
+  "name": "shops",
   "version": "1.0.0",
-  "description": "AD-CO theme dependencies.",
+  "description": "SHOPs theme dependencies.",
   "repository": {
     "type": "git",
     "url": ""

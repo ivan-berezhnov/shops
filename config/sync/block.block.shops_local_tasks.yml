@@ -9,7 +9,7 @@ _core:
 id: shops_local_tasks
 theme: shops
 region: content
-weight: 0
+weight: -5
 provider: null
 plugin: local_tasks_block
 settings:

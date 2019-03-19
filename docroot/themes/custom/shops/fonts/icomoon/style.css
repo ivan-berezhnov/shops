@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?98bd');
-  src:  url('fonts/icomoon.eot?98bd#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?98bd') format('truetype'),
-    url('fonts/icomoon.woff?98bd') format('woff'),
-    url('fonts/icomoon.svg?98bd#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?2zxu8s');
+  src:  url('fonts/icomoon.eot?2zxu8s#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?2zxu8s') format('truetype'),
+    url('fonts/icomoon.woff?2zxu8s') format('woff'),
+    url('fonts/icomoon.svg?2zxu8s#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-filter-top:before {
+  content: "\e91e";
+}
+.icon-customer:before {
+  content: "\e918";
+}
+.icon-favorite:before {
+  content: "\e919";
+}
+.icon-copy:before {
+  content: "\e91a";
+}
+.icon-track:before {
+  content: "\e91b";
+}
+.icon-free-delivery:before {
+  content: "\e91c";
+}
+.icon-shopping-cart:before {
+  content: "\e91d";
+}
 .icon-phone:before {
   content: "\e915";
 }
@@ -45,7 +66,7 @@
 .icon-download:before {
   content: "\e90d";
 }
-.icon-link-2:before {
+.icon-link:before {
   content: "\e90e";
 }
 .icon-settings:before {

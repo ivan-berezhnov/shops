@@ -25,11 +25,4 @@
  * @see template_preprocess_block()
  */
 #}
-
-<div{{ attributes }}>
-  {% block content %}
-    <ul class="dropdown-base">
-      {{ content }}
-    </ul>
-  {% endblock %}
-</div>
+{{ content }}

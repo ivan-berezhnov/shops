@@ -1,0 +1,21 @@
+uuid: 10a25b9b-668e-418d-8f62-12aa4ed03c10
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_wishlist
+_core:
+  default_config_hash: OAX7elUksp-9g6hO1f6y0N2kPvinopwzj6W0bZBzdnk
+id: commerce_wishlist.wishlist_items
+field_name: wishlist_items
+entity_type: commerce_wishlist
+type: entity_reference
+settings:
+  target_type: commerce_wishlist_item
+module: core
+locked: true
+cardinality: -1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

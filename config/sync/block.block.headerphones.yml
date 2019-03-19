@@ -10,8 +10,8 @@ dependencies:
     - shops
 id: headerphones
 theme: shops
-region: header_top_area
-weight: 0
+region: header_phone
+weight: -8
 provider: null
 plugin: 'block_content:e9840351-3092-4c06-a365-2df5faf13c00'
 settings:
