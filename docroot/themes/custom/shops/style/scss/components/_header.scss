@@ -80,22 +80,24 @@ $menu-link-color: $gray-600;
   }
 
   &--user-tools {
-    @extend .col-sm-9;
+    @extend .col-sm-8;
+    @extend .ml-auto;
     @extend .d-flex;
     @extend .justify-content-end;
 
     a {
       color: $gray-600;
-      font-size: .9rem;
+      font-size: .85rem;
       font-weight: 300;
       text-decoration: none;
+      line-height: 1.2;
       word-wrap: break-word;
       @extend .d-flex;
       @extend .align-items-center;
       @extend .ml-5;
 
       &:before {
-        max-width: 100px;
+        max-width: 120px;
         font-size: 2rem;
         font-weight: 400;
         @extend .mr-2;
@@ -110,6 +112,7 @@ $menu-link-color: $gray-600;
 
   .user_tool {
     &--delivery a {
+      @extend .ml-0;
       @include icoMoon('free-delivery', 'before');
     }
     &--copy a {
