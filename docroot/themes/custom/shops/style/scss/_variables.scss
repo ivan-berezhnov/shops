@@ -276,21 +276,14 @@ $embed-responsive-aspect-ratios: join(
 //
 // Font, line-height, and color for body text, headings, and more.
 
-// Google Fonts
-@import url(https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300,400,500,700);
-
-// Font Variables
-$roboto: 'Roboto', sans-serif;
-$open-sans: 'Open Sans', sans-serif;
-
 $fontsPath: '../../fonts/';
 
 /* font-family: "ICOMOON"; */
 @include font-face('Icomoon', $fontsPath+'icomoon/fonts/icomoon',  $file-formats: eot svg ttf woff);
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-sans-serif: 'Roboto', sans-serif !default;
+$font-family-monospace: 'Ubuntu Mono', monospace !default;
 $font-family-base: $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
