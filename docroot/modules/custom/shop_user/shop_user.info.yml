@@ -1,0 +1,5 @@
+name: Shop User
+type: module
+description: User functions.
+core: 8.x
+package: shop_user

@@ -1,4 +1,3 @@
-$menu-link-color: $gray-600;
 
 .header {
   @extend .mb-3;
@@ -29,6 +28,7 @@ $menu-link-color: $gray-600;
     &:hover,
     &:focus {
       color: darken($menu-link-color, 30%);
+      text-decoration: underline;
     }
   }
 
@@ -50,6 +50,7 @@ $menu-link-color: $gray-600;
   &--phone {
     @extend .pt-1;
     @extend .pb-1;
+    @extend .col-sm-5;
 
     .dropdown {
       @extend .d-inline;
@@ -83,7 +84,7 @@ $menu-link-color: $gray-600;
     @extend .col-sm-8;
     @extend .ml-auto;
     @extend .d-flex;
-    @extend .justify-content-end;
+    @extend .justify-content-center;
 
     a {
       color: $gray-600;
@@ -98,7 +99,7 @@ $menu-link-color: $gray-600;
 
       &:before {
         max-width: 120px;
-        font-size: 2rem;
+        font-size: 1rem;
         font-weight: 400;
         @extend .mr-2;
       }

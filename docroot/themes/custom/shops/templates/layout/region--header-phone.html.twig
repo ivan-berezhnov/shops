@@ -12,8 +12,10 @@
  * @see template_preprocess_region()
  */
 #}
-{% if content %}
-  <div class="dropdown">
-    {{ content }}
-  </div> / <a href="#">{{ 'Call you back?'|t }}</a>
-{% endif %}
+<div class="header_top--phone">
+  {% if content %}
+    <div class="dropdown">
+      {{ content }}
+    </div> / <a href="#">{{ 'Call you back?'|t }}</a>
+  {% endif %}
+</div>

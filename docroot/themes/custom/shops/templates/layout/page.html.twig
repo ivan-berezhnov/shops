@@ -48,9 +48,7 @@
   <div class="header_top">
     <div class="container">
       <div class="row">
-        <div class="col-sm-4 header_top--phone">
-          {{ page.header_phone }}
-        </div>
+        {{ page.header_phone }}
         {{ page.header_info_menu }}
         {{ page.header_lang }}
       </div>
@@ -62,7 +60,7 @@
       {{ page.header_branding }}
       {{ page.header_user_tools }}
       <div class="header_info--user-tools">
-        <div class="user_tool--delivery"><a href="#">{{ 'Free delivery'|t }}</a></div>
+        {#<div class="user_tool--delivery"><a href="#">{{ 'Free delivery'|t }}</a></div>#}
         <div class="user_tool--copy"><a href="#">{{ 'Compare'|t }}</a></div>
         <div class="user_tool--favorite"><a href="{{ path('commerce_wishlist.page') }}">{{ 'Wishlist'|t }}</a></div>
 

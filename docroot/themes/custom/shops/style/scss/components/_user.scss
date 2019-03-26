@@ -1,0 +1,18 @@
+.user {
+  &--menu {
+    @extend .nav;
+    @extend .nav-tabs;
+
+    & > li {
+      @extend .nav-item;
+
+      & > a {
+        @extend .nav-link;
+      }
+
+      & > .is-active {
+        @extend .active;
+      }
+    }
+  }
+}
