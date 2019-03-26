@@ -23,7 +23,7 @@ var paths = {
     '!js/**/*.min.js'
   ],
   sass: {
-    main: ['style/scss/styles.scss', 'style/scss/iframes.scss', 'style/scss/print.scss', 'style/scss/wysiwyg.scss'],
+    main: ['style/scss/styles.scss', 'style/scss/print.scss', 'style/scss/wysiwyg.scss'],
     watch: 'style/scss/**/*'
   },
   css: {
@@ -113,7 +113,7 @@ gulp.task('compress', function () {
 
 gulp.task('csscomb', function () {
   'use strict';
-  return gulp.src(['./style/scss/**/*.scss'], {base: './'})
+  return gulp.src(['./style/scss/_base.scss', './style/scss/styles.scss', './style/scss/print.scss', './style/scss/wysiwyg.scss', './style/scss/components/*.scss'], {base: './'})
     .pipe(csscomb())
     .pipe(gulp.dest('./'));
 });
