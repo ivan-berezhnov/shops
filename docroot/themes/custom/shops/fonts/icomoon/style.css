@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?2zxu8s');
-  src:  url('fonts/icomoon.eot?2zxu8s#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?2zxu8s') format('truetype'),
-    url('fonts/icomoon.woff?2zxu8s') format('woff'),
-    url('fonts/icomoon.svg?2zxu8s#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?2x6jef');
+  src:  url('fonts/icomoon.eot?2x6jef#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?2x6jef') format('truetype'),
+    url('fonts/icomoon.woff?2x6jef') format('woff'),
+    url('fonts/icomoon.svg?2x6jef#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,8 +24,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-filter-top:before {
-  content: "\e91e";
+.icon-weightlifting:before {
+  content: "\e90c";
+}
+.icon-dumbbell:before {
+  content: "\e924";
+}
+.icon-badge-gym:before {
+  content: "\e91f";
+}
+.icon-hand-gym:before {
+  content: "\e920";
+}
+.icon-muscle:before {
+  content: "\e921";
+}
+.icon-phone-call:before {
+  content: "\e922";
+}
+.icon-translation:before {
+  content: "\e923";
 }
 .icon-customer:before {
   content: "\e918";
@@ -60,12 +78,6 @@
 .icon-facebook:before {
   content: "\e913";
 }
-.icon-user:before {
-  content: "\e90c";
-}
-.icon-download:before {
-  content: "\e90d";
-}
 .icon-link:before {
   content: "\e90e";
 }
@@ -74,9 +86,6 @@
 }
 .icon-star:before {
   content: "\e910";
-}
-.icon-upload:before {
-  content: "\e911";
 }
 .icon-sort-asc:before {
   content: "\e90a";

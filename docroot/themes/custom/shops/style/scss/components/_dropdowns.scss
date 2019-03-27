@@ -1,0 +1,62 @@
+#block-headerphones,
+#block-languageswitcher {
+  margin-top: -.5rem;
+  padding-right: 1rem;
+
+  @extend .position-relative;
+  @extend .pl-lg-0;
+
+  .wrapper {
+    right: 0;
+
+    @extend .bg-white;
+    @extend .pr-4;
+    @extend .pl-3;
+    @extend .pb-2;
+    @extend .pt-3;
+    @extend .position-absolute;
+    @include icoMoon('chevron-down', 'after');
+    @include hover {
+      @extend .shadow-lg;
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:after {
+      top: 1.15rem;
+      right: .3rem;
+
+      @extend .position-absolute;
+    }
+  }
+
+  ul {
+    @extend .d-none;
+  }
+
+  &:hover ul {
+    right: 15px;
+
+    @extend .list-unstyled;
+    @extend .pt-1;
+    @extend .m-0;
+    @extend .p-0;
+    @extend .d-block;
+  }
+
+  li {
+    @extend .pb-1;
+    @extend .pt-1;
+  }
+
+  a {
+    color: $gray-600;
+
+    @include hover {
+      text-decoration: $link-hover-decoration;
+
+      color: $link-hover-color;
+    }
+  }
+}

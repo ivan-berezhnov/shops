@@ -1,17 +1,19 @@
 body {
   background-color: #FAFAFA;
+
+  font-size: .875rem;
 }
 
 .dropdown {
   &-menu {
-    @extend .pb-0;
-    @extend .pt-0;
-    @extend .shadow-sm;
     @extend .border-0;
+    @extend .shadow-sm;
+    @extend .pt-0;
+    @extend .pb-0;
   }
   &-item {
-    @extend .pb-2;
     @extend .pt-2;
+    @extend .pb-2;
   }
 }
 
@@ -25,4 +27,26 @@ body {
   display: none;
 
   background: rgba($black,.54);
+}
+
+#block-shops-local-tasks {
+  @extend .pb-2;
+  @extend .pt-2;
+
+  ul {
+    @extend .nav-tabs;
+    @extend .nav;
+  }
+
+  li {
+    @extend .nav-item;
+
+    a {
+      @extend .nav-link;
+    }
+  }
+
+  .is-active {
+    @extend .active;
+  }
 }

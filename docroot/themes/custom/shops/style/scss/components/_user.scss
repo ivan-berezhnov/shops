@@ -1,7 +1,7 @@
 .user {
   &--menu {
-    @extend .nav;
     @extend .nav-tabs;
+    @extend .nav;
 
     & > li {
       @extend .nav-item;

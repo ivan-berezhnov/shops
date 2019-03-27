@@ -43,10 +43,11 @@
  */
 #}
 
-<header class="header">
+<header id="header" class="header">
   {{ page.header_adv }}
   {{ page.header_primary }}
   {{ page.header_secondary }}
+  {{ page.header_mobile_navigation }}
   <div class="overlay" style="display: none;"></div>
 </header>
 
@@ -86,7 +87,7 @@
 </main>
 
 {% if page.footer %}
-  <footer class="footer">
+  <footer id="footer" class="footer">
     <div class="footer">
       {{ page.footer }}
     </div>

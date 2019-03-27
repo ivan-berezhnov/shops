@@ -1,0 +1,118 @@
+.header {
+  @extend .bg-white;
+
+  &-adv,
+  &-primary {
+    @extend .container;
+
+    & > .content {
+      @extend .row;
+    }
+  }
+
+  &-adv,
+  &-primary {
+    @extend .d-lg-block;
+    @extend .d-none;
+  }
+
+  &-primary {
+    @extend .pb-2;
+    @extend .pt-3;
+  }
+
+  &-secondary {
+    @extend .bg-dark;
+    @extend .container-fluid;
+
+    & > .content {
+      @extend .container;
+    }
+  }
+}
+
+// Logo.
+#block-shops-branding {
+  @extend .col-lg-3;
+
+  h1 {
+    @extend .h2;
+  }
+
+  a {
+    letter-spacing: .2rem;
+
+    color: $green;
+
+    @extend .text-capitalize;
+    @include hover {
+      text-decoration: none;
+
+      color: $green;
+    }
+
+    span {
+      @extend .text-dark;
+      @include icoMoon('weightlifting', 'before');
+
+      &:before {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+// Info menu.
+#block-header-infomenu {
+  @extend .mr-auto;
+  @extend .ml-auto;
+  @extend .col-lg-6;
+
+  ul {
+    @extend .nav;
+  }
+
+  li {
+    @extend .nav-item;
+
+    a {
+      color: $gray-700;
+
+      @extend .nav-link;
+      @include hover {
+        text-decoration: $link-hover-decoration;
+
+        color: $orange;
+      }
+    }
+
+    &:first-child {
+      a {
+        color: $orange;
+
+        font-weight: 600;
+      }
+    }
+  }
+
+  .is-active {
+    @extend .active;
+  }
+}
+
+// Phone numbers.
+#block-headerphones {
+  @extend .text-right;
+  @extend .ml-auto;
+  @extend .col-lg-2;
+
+  a {
+    @extend .h6;
+  }
+}
+
+// Switch language.
+#block-languageswitcher {
+  @extend .text-right;
+  @extend .col-lg-1;
+}
