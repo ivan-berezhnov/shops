@@ -19,6 +19,14 @@
   &-primary {
     @extend .pb-2;
     @extend .pt-3;
+
+    & > .content {
+      @extend .col-lg-12;
+      @extend .flex-row;
+      @extend .justify-content-between;
+      @extend .pr-0;
+      @extend .pl-0;
+    }
   }
 
   &-secondary {
@@ -33,7 +41,6 @@
 
 // Logo.
 #block-shops-branding {
-  @extend .col-lg-3;
 
   h1 {
     @extend .h2;
@@ -53,9 +60,9 @@
 
     span {
       @extend .text-dark;
-      @include icoMoon('weightlifting', 'before');
+      @include icoMoon('weightlifting', 'after');
 
-      &:before {
+      &:after {
         display: inline-block;
       }
     }
@@ -64,9 +71,7 @@
 
 // Info menu.
 #block-header-infomenu {
-  @extend .mr-auto;
   @extend .ml-auto;
-  @extend .col-lg-6;
 
   ul {
     @extend .nav;
@@ -104,7 +109,8 @@
 #block-headerphones {
   @extend .text-right;
   @extend .ml-auto;
-  @extend .col-lg-2;
+  @extend .w-100;
+  max-width: 143px;
 
   a {
     @extend .h6;
@@ -114,5 +120,6 @@
 // Switch language.
 #block-languageswitcher {
   @extend .text-right;
-  @extend .col-lg-1;
+  @extend .w-100;
+  max-width: 84px;
 }
