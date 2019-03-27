@@ -12,27 +12,27 @@
 
   &-adv,
   &-primary {
-    @extend .d-lg-block;
     @extend .d-none;
+    @extend .d-lg-block;
   }
 
   &-primary {
-    @extend .pb-2;
     @extend .pt-3;
+    @extend .pb-2;
 
     & > .content {
       & > .wrapper {
-        @extend .d-flex;
-        @extend .col-lg-12;
-        @extend .flex-row;
         @extend .justify-content-between;
+        @extend .flex-row;
+        @extend .col-lg-12;
+        @extend .d-flex;
       }
     }
   }
 
   &-secondary {
-    @extend .bg-dark;
     @extend .container-fluid;
+    @extend .bg-dark;
 
     & > .content {
       @extend .container;
@@ -42,7 +42,6 @@
 
 // Logo.
 #block-shops-branding {
-
   h1 {
     @extend .h2;
   }
@@ -84,13 +83,11 @@
     a {
       color: $gray-700;
 
-
-
-      @extend .nav-link;
-      @extend .pl-lg-2;
-      @extend .pl-xl-3;
-      @extend .pr-lg-2;
       @extend .pr-xl-3;
+      @extend .pr-lg-2;
+      @extend .pl-xl-3;
+      @extend .pl-lg-2;
+      @extend .nav-link;
       @include hover {
         text-decoration: $link-hover-decoration;
 
@@ -114,9 +111,10 @@
 
 // Phone numbers.
 #block-headerphones {
-  @extend .ml-auto;
-  @extend .w-100;
   max-width: 143px;
+
+  @extend .w-100;
+  @extend .ml-auto;
 
   a {
     @extend .h6;
@@ -125,6 +123,7 @@
 
 // Switch language.
 #block-languageswitcher {
-  @extend .w-100;
   max-width: 85px;
+
+  @extend .w-100;
 }
