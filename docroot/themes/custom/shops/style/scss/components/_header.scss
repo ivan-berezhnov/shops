@@ -21,11 +21,12 @@
     @extend .pt-3;
 
     & > .content {
-      @extend .col-lg-12;
-      @extend .flex-row;
-      @extend .justify-content-between;
-      @extend .pr-0;
-      @extend .pl-0;
+      & > .wrapper {
+        @extend .d-flex;
+        @extend .col-lg-12;
+        @extend .flex-row;
+        @extend .justify-content-between;
+      }
     }
   }
 
@@ -83,7 +84,13 @@
     a {
       color: $gray-700;
 
+
+
       @extend .nav-link;
+      @extend .pl-lg-2;
+      @extend .pl-xl-3;
+      @extend .pr-lg-2;
+      @extend .pr-xl-3;
       @include hover {
         text-decoration: $link-hover-decoration;
 
@@ -107,7 +114,6 @@
 
 // Phone numbers.
 #block-headerphones {
-  @extend .text-right;
   @extend .ml-auto;
   @extend .w-100;
   max-width: 143px;
@@ -119,7 +125,6 @@
 
 // Switch language.
 #block-languageswitcher {
-  @extend .text-right;
   @extend .w-100;
-  max-width: 84px;
+  max-width: 85px;
 }

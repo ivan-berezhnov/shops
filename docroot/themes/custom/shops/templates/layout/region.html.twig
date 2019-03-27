@@ -20,7 +20,9 @@
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
     <div class="content">
-      {{ content }}
+      <div class="wrapper">
+        {{ content }}
+      </div>
     </div>
   </div>
 {% endif %}
