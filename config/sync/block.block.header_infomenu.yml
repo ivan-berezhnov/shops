@@ -10,8 +10,8 @@ dependencies:
     - shops
 id: header_infomenu
 theme: shops
-region: header_info_menu
-weight: -8
+region: header_primary
+weight: -6
 provider: null
 plugin: 'system_menu_block:info-menu'
 settings:

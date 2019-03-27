@@ -1,0 +1,39 @@
+uuid: 8445c35f-2d93-4c07-937f-32fe2ebd185b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.adv_block
+    - field.field.block_content.adv_block.field_background_color
+    - field.field.block_content.adv_block.field_image_media_
+  module:
+    - color_field
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    sections: {  }
+id: block_content.adv_block.default
+targetEntityType: block_content
+bundle: adv_block
+mode: default
+content:
+  field_background_color:
+    weight: 1
+    label: hidden
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_image_media_:
+    type: entity_reference_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

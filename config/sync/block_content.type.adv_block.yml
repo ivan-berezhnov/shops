@@ -1,0 +1,8 @@
+uuid: 75f1f4f9-6fb2-42bd-8698-c85ca588f960
+langcode: en
+status: true
+dependencies: {  }
+id: adv_block
+label: 'ADV Block'
+revision: 0
+description: 'Advertising block in header'

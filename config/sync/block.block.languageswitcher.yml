@@ -8,8 +8,8 @@ dependencies:
     - shops
 id: languageswitcher
 theme: shops
-region: header_lang
-weight: -7
+region: header_primary
+weight: -4
 provider: null
 plugin: 'language_block:language_interface'
 settings:

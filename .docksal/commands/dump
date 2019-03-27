@@ -18,10 +18,6 @@ echo-green () { echo -e "${green}$1${NC}"; }
 echo-green-bg () { echo -e "${green_bg}$1${NC}"; }
 echo-yellow () { echo -e "${yellow}$1${NC}"; }
 
-#Show some art
-clear
-cat "${PROJECT_ROOT}/build-scripts/ascii.txt"
-
 echo-yellow "Dump dbs..."
 fin db dump --db=sportbaza --db-user=user --db-password=user $PROJECT_ROOT/db/default_sportbaza.sql
 fin db dump --db=tooll --db-user=user --db-password=user $PROJECT_ROOT/db/default_tooll.sql
