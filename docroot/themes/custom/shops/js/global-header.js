@@ -27,7 +27,8 @@
   Drupal.behaviors.hideOverlay = {
     attach: function (context, settings) {
       $('.overlay', context).once('showMenuOverlay').click(function () {
-        $(this).hide();
+        $('.overlay').toggle();
+        $('.mobile-navigation').removeClass('show');
       });
     }
   };

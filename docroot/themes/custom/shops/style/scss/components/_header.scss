@@ -4,7 +4,8 @@
   &-adv,
   &-primary {
     z-index: 105;
-
+    @extend .d-none;
+    @extend .d-lg-block;
     @extend .bg-white;
     @extend .position-relative;
 
@@ -179,6 +180,7 @@
 #block-shops-search {
   padding: 10px 14px;
 
+  @extend .col-10;
   @extend .col-lg-6;
   @extend .position-relative;
 
@@ -189,6 +191,8 @@
     @extend .form-control;
     @extend .form-control-sm;
     @extend .w-100;
+    @extend .border-0;
+
   }
 }
 
