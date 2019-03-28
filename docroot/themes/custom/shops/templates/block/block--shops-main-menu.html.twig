@@ -34,7 +34,7 @@
  */
 #}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
-<div class="menu--mobile"></div>
+<div class="menu--mobile ssm-toggle-nav"></div>
 <nav role="navigation"
      aria-labelledby="{{ heading_id }}"{{ attributes.addClass('dropdown')|without('role', 'aria-labelledby') }}>
   {# Label. If not displayed, we still provide it for screen readers. #}

@@ -12,7 +12,6 @@
     attach: function (context, settings) {
       var titleWidth;
 
-      // $('.overlay').hide();
       $('#block-shops-main-menu-menu, .dropdown-item', context).once('showMenuOverlay').click(function () {
         $('.overlay').toggle();
         titleWidth = $(this).width();
@@ -28,7 +27,6 @@
     attach: function (context, settings) {
       $('.overlay', context).once('showMenuOverlay').click(function () {
         $('.overlay').toggle();
-        $('.mobile-navigation').removeClass('show');
       });
     }
   };

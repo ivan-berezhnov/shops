@@ -4,14 +4,15 @@
   &-adv,
   &-primary {
     z-index: 105;
-    @extend .d-none;
-    @extend .d-lg-block;
-    @extend .bg-white;
+
     @extend .position-relative;
+    @extend .bg-white;
+    @extend .d-lg-block;
+    @extend .d-none;
 
     & > .content {
-      @extend .container;
       @extend .bg-white;
+      @extend .container;
 
       & > .wrapper {
         @extend .row;
@@ -20,15 +21,15 @@
   }
 
   &-primary {
-    @extend .pt-3;
     @extend .pb-2;
+    @extend .pt-3;
 
     & > .content {
       & > .wrapper {
-        @extend .justify-content-between;
-        @extend .flex-row;
-        @extend .col-lg-12;
         @extend .d-flex;
+        @extend .col-lg-12;
+        @extend .flex-row;
+        @extend .justify-content-between;
       }
     }
   }
@@ -69,8 +70,8 @@
     }
 
     span {
-      @extend .position-relative;
       @extend .text-dark;
+      @extend .position-relative;
       @include icoMoon('treadmill', 'before');
 
       &:after {
@@ -85,8 +86,8 @@
 
         font-size: 8px;
 
-        @extend .position-absolute;
         @extend .text-capitalize;
+        @extend .position-absolute;
       }
     }
   }
@@ -94,9 +95,9 @@
 
 // Info menu.
 #block-header-infomenu {
-  @extend .d-none;
-  @extend .d-lg-block;
   @extend .ml-auto;
+  @extend .d-lg-block;
+  @extend .d-none;
 
   ul {
     @extend .nav;
@@ -108,11 +109,11 @@
     a {
       color: $gray-700;
 
-      @extend .pr-xl-3;
-      @extend .pr-lg-2;
-      @extend .pl-xl-3;
-      @extend .pl-lg-2;
       @extend .nav-link;
+      @extend .pl-lg-2;
+      @extend .pl-xl-3;
+      @extend .pr-lg-2;
+      @extend .pr-xl-3;
       @include hover {
         text-decoration: $link-hover-decoration;
 
@@ -138,10 +139,10 @@
 #block-headerphones {
   max-width: 158px;
 
-  @extend .d-none;
-  @extend .d-lg-block;
-  @extend .w-100;
   @extend .ml-auto;
+  @extend .w-100;
+  @extend .d-lg-block;
+  @extend .d-none;
 
   a {
     @extend .h6;
@@ -154,8 +155,8 @@
 
   li {
     &:last-child {
-      @extend .small;
       @extend .text-center;
+      @extend .small;
     }
   }
 }
@@ -164,35 +165,34 @@
 #block-languageswitcher {
   max-width: 85px;
 
-  @extend .d-none;
-  @extend .d-lg-block;
   @extend .w-100;
+  @extend .d-lg-block;
+  @extend .d-none;
 }
 
 #block-shops-main-menu {
   background-color: $gray-800;
 
-  @extend .col-lg-3;
-  @extend .d-none;
   @extend .d-lg-block;
+  @extend .d-none;
+  @extend .col-lg-3;
 }
 
 #block-shops-search {
   padding: 10px 14px;
 
-  @extend .col-10;
-  @extend .col-lg-6;
   @extend .position-relative;
+  @extend .col-lg-6;
+  @extend .col-10;
 
   .js-form-type-search {
     @extend .w-100;
   }
   .form-search {
-    @extend .form-control;
-    @extend .form-control-sm;
-    @extend .w-100;
     @extend .border-0;
-
+    @extend .w-100;
+    @extend .form-control-sm;
+    @extend .form-control;
   }
 }
 

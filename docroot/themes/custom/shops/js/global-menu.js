@@ -4,28 +4,42 @@
 
 (function (Drupal, $) {
   'use strict';
+  //
+  // /**
+  //  * Show mobile menu.
+  //  */
+  // Drupal.behaviors.mobileMenuOpen = {
+  //   attach: function (context, settings) {
+  //     $('.menu--mobile').once('mobile-menu-show').on('click', function() {
+  //       $('.mobile-navigation').toggleClass('show');
+  //       $('.overlay').toggle();
+  //     });
+  //   }
+  // };
+  //
+  // /**
+  //  * Hide mobile menu.
+  //  */
+  // Drupal.behaviors.mobileMenuClose = {
+  //   attach: function (context, settings) {
+  //     $('.menu--mobile__close').once('mobile-menu-close').on('click', function() {
+  //       $('.mobile-navigation').removeClass('show');
+  //       $('.overlay').toggle();
+  //     });
+  //   }
+  // };
 
   /**
-   * Show mobile menu.
+   * Swipe mobile menu.
    */
-  Drupal.behaviors.mobileMenuOpen = {
+  Drupal.behaviors.mobileMenuSwipe = {
     attach: function (context, settings) {
-      $('.menu--mobile').once('mobile-menu-show').on('click touchstart', function() {
-        $('.mobile-navigation').toggleClass('show');
-        $('.overlay').toggle();
-      });
+      Drupal.menuSwipe();
     }
   };
 
-  /**
-   * Hide mobile menu.
-   */
-  Drupal.behaviors.mobileMenuClose = {
-    attach: function (context, settings) {
-      $('.menu--mobile__close').once('mobile-menu-close').on('click touchstart', function() {
-        $('.mobile-navigation').removeClass('show');
-        $('.overlay').toggle();
-      });
-    }
+  Drupal.menuSwipe = function () {
+    $('.mobile-navigation').slideAndSwipe();
   };
+
 })(Drupal, jQuery);

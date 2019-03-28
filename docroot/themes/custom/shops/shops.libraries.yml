@@ -15,6 +15,8 @@ global-header:
 global-menu:
   js:
     js/dist/global-menu.min.js: {minified: true}
+    assets/jquery-touchswipe/jquery.touchSwipe.min.js: {minified: true}
+    assets/slide-and-swipe-menu/jquery.slideandswipe.min.js: {minified: true}
   dependencies:
   - core/drupal
   - core/jquery.once
