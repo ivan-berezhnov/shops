@@ -6,13 +6,13 @@
       font-size: 1.15rem;
       font-weight: 400;
 
-      @extend .h-100;
-      @extend .align-items-center;
-      @extend .d-flex;
-      @extend .m-0;
       @extend .text-white;
-      @include icoMoon('chevron-down', 'after');
+      @extend .m-0;
+      @extend .d-flex;
+      @extend .align-items-center;
+      @extend .h-100;
       @include icoMoon('menu', 'before');
+      @include icoMoon('chevron-down', 'after');
 
       &:before {
         @extend .pr-3;
@@ -32,6 +32,15 @@
     &__drop-list {
       .show {
         left: -15px !important;
+      }
+
+      a {
+        font-size: .875rem;
+
+        @extend .dropdown-item;
+        @include hover {
+          color: $orange;
+        }
       }
     }
 

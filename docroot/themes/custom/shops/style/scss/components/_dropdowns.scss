@@ -3,26 +3,26 @@
   margin-top: -.5rem;
   padding-right: 1rem;
 
-  @extend .position-relative;
   @extend .pl-lg-0;
+  @extend .position-relative;
 
   .wrapper {
     z-index: 500;
     right: 0;
 
-    @extend .bg-white;
-    @extend .pr-4;
-    @extend .pl-3;
-    @extend .pb-2;
-    @extend .pt-3;
     @extend .position-absolute;
-    @include icoMoon('chevron-down', 'after');
+    @extend .pt-3;
+    @extend .pb-2;
+    @extend .pl-3;
+    @extend .pr-4;
+    @extend .bg-white;
     @include hover {
       @extend .shadow-lg;
       &:after {
         transform: rotate(180deg);
       }
     }
+    @include icoMoon('chevron-down', 'after');
 
     &:after {
       top: 1.15rem;
@@ -39,16 +39,16 @@
   &:hover ul {
     right: 15px;
 
-    @extend .list-unstyled;
-    @extend .pt-1;
-    @extend .m-0;
-    @extend .p-0;
     @extend .d-block;
+    @extend .p-0;
+    @extend .m-0;
+    @extend .pt-1;
+    @extend .list-unstyled;
   }
 
   li {
-    @extend .pb-1;
     @extend .pt-1;
+    @extend .pb-1;
   }
 
   a {

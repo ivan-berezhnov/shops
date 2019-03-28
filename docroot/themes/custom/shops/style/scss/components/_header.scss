@@ -1,14 +1,16 @@
 .header {
-  z-index: 100;
-
-  @extend .position-relative;
   @extend .bg-white;
 
   &-adv,
   &-primary {
+    z-index: 105;
+
+    @extend .bg-white;
+    @extend .position-relative;
+
     & > .content {
-      @extend .bg-white;
       @extend .container;
+      @extend .bg-white;
 
       & > .wrapper {
         @extend .row;
@@ -17,21 +19,25 @@
   }
 
   &-primary {
-    @extend .pb-2;
     @extend .pt-3;
+    @extend .pb-2;
 
     & > .content {
       & > .wrapper {
-        @extend .d-flex;
-        @extend .col-lg-12;
-        @extend .flex-row;
         @extend .justify-content-between;
+        @extend .flex-row;
+        @extend .col-lg-12;
+        @extend .d-flex;
       }
     }
   }
 
   &-secondary {
+    z-index: 100;
+
     background-color: $gray-900;
+
+    @extend .position-relative;
 
     & > .content {
       @extend .container;
@@ -62,8 +68,8 @@
     }
 
     span {
-      @extend .text-dark;
       @extend .position-relative;
+      @extend .text-dark;
       @include icoMoon('treadmill', 'before');
 
       &:after {
@@ -71,15 +77,15 @@
       }
 
       &:after {
-        top: 30px;
-        right: 0;
+        top: 32px;
+        right: 8px;
 
         content: '.SHOP';
 
-        font-size: 10px;
+        font-size: 8px;
 
-        @extend .text-capitalize;
         @extend .position-absolute;
+        @extend .text-capitalize;
       }
     }
   }
@@ -87,9 +93,9 @@
 
 // Info menu.
 #block-header-infomenu {
-  @extend .ml-auto;
-  @extend .d-lg-block;
   @extend .d-none;
+  @extend .d-lg-block;
+  @extend .ml-auto;
 
   ul {
     @extend .nav;
@@ -101,11 +107,11 @@
     a {
       color: $gray-700;
 
-      @extend .nav-link;
-      @extend .pl-lg-2;
-      @extend .pl-xl-3;
-      @extend .pr-lg-2;
       @extend .pr-xl-3;
+      @extend .pr-lg-2;
+      @extend .pl-xl-3;
+      @extend .pl-lg-2;
+      @extend .nav-link;
       @include hover {
         text-decoration: $link-hover-decoration;
 
@@ -131,10 +137,10 @@
 #block-headerphones {
   max-width: 158px;
 
-  @extend .ml-auto;
-  @extend .w-100;
-  @extend .d-lg-block;
   @extend .d-none;
+  @extend .d-lg-block;
+  @extend .w-100;
+  @extend .ml-auto;
 
   a {
     @extend .h6;
@@ -147,8 +153,8 @@
 
   li {
     &:last-child {
-      @extend .text-center;
       @extend .small;
+      @extend .text-center;
     }
   }
 }
@@ -157,30 +163,32 @@
 #block-languageswitcher {
   max-width: 85px;
 
-  @extend .w-100;
-  @extend .d-lg-block;
   @extend .d-none;
+  @extend .d-lg-block;
+  @extend .w-100;
 }
 
 #block-shops-main-menu {
   background-color: $gray-800;
 
   @extend .col-lg-3;
+  @extend .d-none;
+  @extend .d-lg-block;
 }
 
 #block-shops-search {
   padding: 10px 14px;
 
-  @extend .position-relative;
   @extend .col-lg-6;
+  @extend .position-relative;
 
   .js-form-type-search {
     @extend .w-100;
   }
   .form-search {
-    @extend .w-100;
-    @extend .form-control-sm;
     @extend .form-control;
+    @extend .form-control-sm;
+    @extend .w-100;
   }
 }
 

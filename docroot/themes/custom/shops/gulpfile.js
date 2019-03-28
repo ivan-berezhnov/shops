@@ -107,7 +107,7 @@ gulp.task('compress', function () {
   'use strict';
   return gulp.src(paths.scripts)
     .pipe(rename({suffix: '.min'}))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('js/dist'));
 });
 
