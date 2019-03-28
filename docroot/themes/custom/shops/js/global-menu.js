@@ -10,7 +10,7 @@
    */
   Drupal.behaviors.mobileMenuOpen = {
     attach: function (context, settings) {
-      $('.menu--mobile').once('mobile-menu-toggle').on('click touchstart', function() {
+      $('.menu--mobile').once('mobile-menu-show').on('click touchstart', function() {
         $('.mobile-navigation').toggleClass('show');
         $('.overlay').toggle();
       });
@@ -22,7 +22,7 @@
    */
   Drupal.behaviors.mobileMenuClose = {
     attach: function (context, settings) {
-      $('.menu--mobile__close').on('click touchstart', function() {
+      $('.menu--mobile__close').once('mobile-menu-close').on('click touchstart', function() {
         $('.mobile-navigation').removeClass('show');
         $('.overlay').toggle();
       });
