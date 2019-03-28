@@ -1,0 +1,42 @@
+.menu {
+  &--desktop {
+    &__title {
+      cursor: pointer;
+
+      font-size: 1.15rem;
+      font-weight: 400;
+
+      @extend .h-100;
+      @extend .align-items-center;
+      @extend .d-flex;
+      @extend .m-0;
+      @extend .text-white;
+      @include icoMoon('chevron-down', 'after');
+      @include icoMoon('menu', 'before');
+
+      &:before {
+        @extend .pr-3;
+      }
+
+      &:after {
+        @extend .border-0;
+      }
+
+      .show & {
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &__drop-list {
+      .show {
+        left: -15px !important;
+      }
+    }
+
+    .dropdown-menu {
+      @extend .shadow-lg;
+    }
+  }
+}

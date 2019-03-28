@@ -34,17 +34,25 @@
  */
 #}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
-<nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby') }}>
+<div class="menu--mobile"></div>
+<nav role="navigation"
+     aria-labelledby="{{ heading_id }}"{{ attributes.addClass('dropdown')|without('role', 'aria-labelledby') }}>
   {# Label. If not displayed, we still provide it for screen readers. #}
   {% if not configuration.label_display %}
-    {% set title_attributes = title_attributes.addClass('visually-hidden') %}
+    {% set title_attributes = title_attributes %}
   {% endif %}
   {{ title_prefix }}
-  <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ 'Catalog'|t }}</h2>
+  <h2{{ title_attributes.setAttribute('id', heading_id).addClass(['menu--desktop__title', 'dropdown-toggle']) }} id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{- 'Catalog'|t -}}
+  </h2>
   {{ title_suffix }}
 
   {# Menu. #}
   {% block content %}
-    {{ content }}
+    <div class="menu--desktop__drop-list">
+      {{ content }}
+    </div>
   {% endblock %}
 </nav>
+
+

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?2x6jef');
-  src:  url('fonts/icomoon.eot?2x6jef#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?2x6jef') format('truetype'),
-    url('fonts/icomoon.woff?2x6jef') format('woff'),
-    url('fonts/icomoon.svg?2x6jef#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?ch26h2');
+  src:  url('fonts/icomoon.eot?ch26h2#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ch26h2') format('truetype'),
+    url('fonts/icomoon.woff?ch26h2') format('woff'),
+    url('fonts/icomoon.svg?ch26h2#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,23 +24,35 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-treadmill:before {
+  content: "\e90d";
+}
 .icon-weightlifting:before {
   content: "\e90c";
 }
+.icon-copy:before {
+  content: "\e902";
+}
+.icon-close:before {
+  content: "\e903";
+}
+.icon-delivery:before {
+  content: "\e905";
+}
+.icon-search:before {
+  content: "\e90a";
+}
+.icon-shopping-cart:before {
+  content: "\e90b";
+}
+.icon-smartphone:before {
+  content: "\e911";
+}
+.icon-barbel:before {
+  content: "\e915";
+}
 .icon-dumbbell:before {
   content: "\e924";
-}
-.icon-badge-gym:before {
-  content: "\e91f";
-}
-.icon-hand-gym:before {
-  content: "\e920";
-}
-.icon-muscle:before {
-  content: "\e921";
-}
-.icon-phone-call:before {
-  content: "\e922";
 }
 .icon-translation:before {
   content: "\e923";
@@ -51,20 +63,8 @@
 .icon-favorite:before {
   content: "\e919";
 }
-.icon-copy:before {
-  content: "\e91a";
-}
 .icon-track:before {
   content: "\e91b";
-}
-.icon-free-delivery:before {
-  content: "\e91c";
-}
-.icon-shopping-cart:before {
-  content: "\e91d";
-}
-.icon-phone:before {
-  content: "\e915";
 }
 .icon-email:before {
   content: "\e916";
@@ -87,12 +87,6 @@
 .icon-star:before {
   content: "\e910";
 }
-.icon-sort-asc:before {
-  content: "\e90a";
-}
-.icon-sort-desc:before {
-  content: "\e90b";
-}
 .icon-alert-circle:before {
   content: "\e909";
 }
@@ -102,17 +96,8 @@
 .icon-chevron-right:before {
   content: "\e906";
 }
-.icon-x:before {
-  content: "\e905";
-}
-.icon-search:before {
-  content: "\e903";
-}
 .icon-menu:before {
   content: "\e904";
-}
-.icon-lock:before {
-  content: "\e902";
 }
 .icon-arrow-right:before {
   content: "\e900";

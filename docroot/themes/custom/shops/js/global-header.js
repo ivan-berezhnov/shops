@@ -6,12 +6,28 @@
   'use strict';
 
   /**
-   * Show dropdown on hover.
+   * Show overlay on click.
    */
-  Drupal.behaviors.dropdownHover = {
+  Drupal.behaviors.menuOverlay = {
     attach: function (context, settings) {
-      $('.dropdown-hover').hover(function () {
-        $(this).trigger('click.bs.dropdown');
+      var titleWidth;
+
+      // $('.overlay').hide();
+      $('#block-shops-main-menu-menu, .dropdown-item', context).once('showMenuOverlay').click(function () {
+        $('.overlay').toggle();
+        titleWidth = $(this).width();
+        $(this).parent().find('.dropdown-menu').width(titleWidth+30);
+      });
+    }
+  };
+
+  /**
+   * Hide overlay on click.
+   */
+  Drupal.behaviors.hideOverlay = {
+    attach: function (context, settings) {
+      $('.overlay', context).once('showMenuOverlay').click(function () {
+        $(this).hide();
       });
     }
   };

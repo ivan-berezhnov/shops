@@ -41,16 +41,21 @@
 
     {% for item in items %}
       {% if loop.first %}
-        {{ item.content }}
+        <a class="first-number" href="{{ item.content['#url']|render|replace({'-':'', '%28': '', '%29': ''}) }}">{{ item.content['#title'] }}</a>
       {% endif %}
     {% endfor %}
 
     <ul>
       {% for item in items %}
         {% if not loop.first %}
-          <li>{{ item.content }}</li>
+          <li>
+            <a href="{{ item.content['#url']|render|replace({'-':'', '%28': '', '%29': ''}) }}">{{ item.content['#title'] }}</a>
+          </li>
         {% endif %}
       {% endfor %}
+      <li>
+        {{ 'Checkout 9:00 - 21:00'|t }}
+      </li>
     </ul>
 
   {% else %}
