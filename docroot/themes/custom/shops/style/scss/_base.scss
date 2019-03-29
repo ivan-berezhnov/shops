@@ -31,7 +31,7 @@ body {
   background: rgba($black,.54);
 
   @include media-breakpoint-down(lg) {
-    z-index: 105;
+    z-index: 550;
   }
 }
 
