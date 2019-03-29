@@ -3,7 +3,7 @@
 
   &-adv,
   &-primary {
-    z-index: 105;
+    z-index: 500;
 
     @extend .position-relative;
     @extend .bg-white;
@@ -35,7 +35,7 @@
   }
 
   &-secondary {
-    z-index: 100;
+    z-index: 500;
 
     background-color: $gray-900;
 
