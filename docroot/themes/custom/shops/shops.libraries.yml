@@ -1,8 +1,14 @@
 styles:
+  js:
+    assets/popper.js/dist/umd/popper.min.js: {minified: true}
+    assets/bootstrap/dist/js/bootstrap.min.js: {minified: true}
   css:
     theme:
       style/css/styles.css: {}
       'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Ubuntu+Mono:400,700&amp;subset=cyrillic': { type: external }
+  dependencies:
+    - core/drupal
+    - core/jquery
 
 global-header:
   js:

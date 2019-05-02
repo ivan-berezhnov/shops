@@ -45,6 +45,8 @@
     }
 
     .dropdown-menu {
+      overflow:scroll;
+      height: 50vh;
       @extend .shadow-lg;
     }
   }
