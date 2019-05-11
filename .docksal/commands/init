@@ -103,27 +103,27 @@ echo-green "\n"
 set -e
 
 # Running Drush commands
-echo-yellow "Running drush cim, drush updb, drush cr"
-echo-yellow " > sportbaza"
-cd $DOCROOT_PATH
-fin drush updb -y --uri=$URL_SB
-fin drush cim -y --uri=$URL_SB
-fin drush cr --uri=$URL_SB
-echo-yellow " > tooll"
-fin drush updb -y --uri=$URL_TL
-fin drush cim -y --uri=$URL_TL
-fin drush cr --uri=$URL_TL
-echo-yellow " > winsport"
-fin drush updb -y --uri=$URL_WIN
-fin drush cim -y --uri=$URL_WIN
-fin drush cr --uri=$URL_WIN
-echo-green "Done.\n"
+#echo-yellow "Running drush cim, drush updb, drush cr"
+#echo-yellow " > sportbaza"
+#cd $DOCROOT_PATH
+#fin drush updb -y --uri=$URL_SB
+#fin drush cim -y --uri=$URL_SB
+#fin drush cr --uri=$URL_SB
+#echo-yellow " > tooll"
+#fin drush updb -y --uri=$URL_TL
+#fin drush cim -y --uri=$URL_TL
+#fin drush cr --uri=$URL_TL
+#echo-yellow " > winsport"
+#fin drush updb -y --uri=$URL_WIN
+#fin drush cim -y --uri=$URL_WIN
+#fin drush cr --uri=$URL_WIN
+#echo-green "Done.\n"
 
 ## Building theme
 echo-yellow "Running gulp tasks in theme ${MAIN_THEME}"
 # TODO: Implement some themes build.
-fin gulp build
-echo-green "Done.\n"
+#fin gulp build
+#echo-green "Done.\n"
 
 # Site initialization
 echo -e "${green_bg} Step 3 ${NC}${green} Test: sites running...${NC}"
@@ -155,3 +155,7 @@ echo -e "${green_bg} Step 4 ${NC}${green} Init build is complete...${NC}"
 echo-green " http://${URL_SB}${NC} "
 echo-green " http://${URL_TL}${NC} "
 echo-green " http://${URL_WIN}${NC} "
+
+echo -e "${green_bg} Env...${NC}"
+
+printenv

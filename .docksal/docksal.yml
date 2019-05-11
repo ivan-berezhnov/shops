@@ -1,11 +1,2 @@
 version: "2.1"
 
-services:
-  # BackstopJS
-  backstop:
-    hostname: backstop
-    image: docksal/backstopjs
-    volumes:
-      - ${PROJECT_ROOT}/tests/backstop:/src
-    # Keep the container running
-    entrypoint: "top -b"
